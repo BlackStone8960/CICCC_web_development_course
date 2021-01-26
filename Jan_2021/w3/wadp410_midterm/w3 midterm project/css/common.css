@@ -1,0 +1,114 @@
+/*  
+  Author of this file : Taichi Ishiguro 
+  Collaborator : Miyabi Tanimichi (who makes other files)
+ */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    vertical-align:baseline;
+    /* background:transparent; */
+}
+
+/* ====================== navigation ====================== */
+.navigation nav {
+  color:  #262626;
+  margin-top: 20px;
+  margin-left: 70px;
+  margin-bottom: 90px;
+}
+
+.navigation nav a {
+  color: #4d4d4d;
+}
+  
+.navigation nav a:visited {
+  color: #262626;
+}
+
+
+/* ====================== Recently Viewed ====================== */
+
+.recently-viewed {
+  margin-top: 90px;
+}
+.recently-viewed h1 {
+  margin-bottom: 20px;
+}
+.color-wrapper {
+  display: flex;
+  flex-flow: row;
+  justify-content: left;
+}
+.color-wrapper span {
+  display: block;
+  line-height: 1;
+}
+.color-tip {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+#beige {
+  background-color: #D9D1BC;
+}
+#gray {
+  background-color: #9B9899;
+}
+#dark-gray {
+  background-color: #34302F;
+}
+#black {
+  background-color: #211F20;
+}
+#red {
+  background-color: #AA182D;
+}
+#brown {
+  background-color: #754E25;
+}
+#navy {
+  background-color: #2A2730;
+}
+
+.viewed-list {
+  display: flex;
+  flex-flow: row;
+  justify-content: left;
+  margin-bottom: 40px;
+}
+.viewed-merchandise {
+  list-style: none;
+  margin-right: 20px;
+}
+.viewed-merchandise img {
+  width: 220px;
+  border-radius: 15px;
+}
+.viewed-marchandise__name {
+  margin: 6px 0 28px;
+}
+.viewed-marchandise__cost {
+  font-weight: bold;
+  font-size: 18px;
+}
+.rating__star {
+  display: inline-block;
+}
+.rating__star img {
+  width: 12px;
+  height: 12px;
+}

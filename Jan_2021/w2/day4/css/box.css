@@ -1,0 +1,51 @@
+/* Taichi Ishiguro (Coded by myself) */
+
+.second-title {
+  margin: 8px 0 35px;
+}
+.box_model {
+  width: 500px;
+  margin: 40px auto;
+}
+.box_model img {
+  width: 500px;
+}
+.colored_direction {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 10px;
+}
+#top {
+  border: 3px solid red;
+}
+#right {
+  border: 3px solid green;
+}
+#bottom {
+  border: 3px solid blue;
+}
+#left {
+  border: 3px solid purple;
+}
+.padding_direction {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 60px 0;
+}
+.padding_direction__description {
+  text-align: center;
+}
+.padding_direction__description > div {
+  margin-bottom: 20px;
+}
+.padding_direction__description > div:last-of-type {
+  margin-bottom: 0;
+}
+.padding_direction__figure {
+  width: 400px;  
+}
+.padding_direction__figure img {
+  width: 400px;
+}

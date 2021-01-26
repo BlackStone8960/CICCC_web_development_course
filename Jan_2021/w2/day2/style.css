@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: blanchedalmond;
+  color: #333;
+}
+nav {
+  width: 98%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 1px solid #555;
+  margin: 10px 1%;
+  background-color: #fff;
+}
+nav .main-menu {
+  list-style: none;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+nav .main-menu li {
+  border: 1px solid #000;
+  margin: 30px 0;
+}
+nav .main-menu li:first-of-type {
+  background-color: #3e4444;
+}
+nav .main-menu li:nth-of-type(2) {
+  background-color: #82b74b;
+}
+nav .main-menu li:nth-of-type(3) {
+  background-color: #405d27;
+}
+nav .main-menu li:last-of-type {
+  background-color: #c1946a;
+}
+
+nav .main-menu li a {
+  text-decoration: none;
+  color: azure;
+  letter-spacing: 2px;
+  font-weight: bold;
+  display: block;
+  padding: 10px 70px;
+}
+nav .main-menu li a:hover {
+  color: #feb236;
+}
+nav .main-menu li a:active {
+  color: #000;
+}
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 110px;
+  margin-top: 50px;
+}
+.wrapper header {
+  text-align: center;
+}
+
+.team-members {
+  border: 1px solid #ff80002c;
+  padding: 4%;
+  margin-bottom: 80px;
+  background-color: #dac292;
+}
+.team-members__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+.team-members__list li {
+  margin-right: 4%;
+}
+.team-members__list li:last-of-type {
+  margin-right: 0;
+}
+.team-members__profile {
+  width: 20%;
+  text-align: center;
+  border: 1px solid #000;
+  padding: 12px;
+  height: 400px;
+  overflow: scroll;
+}
+.team-members__profile:first-of-type {
+  background-color: #d5e1df;
+}
+.team-members__profile:nth-of-type(2) {
+  background-color: #b5e7a0;
+}
+.team-members__profile:nth-of-type(3) {
+  background-color: #86af49;
+}
+.team-members__profile:last-of-type {
+  background-color: #e3eaa7;
+}
+.team-members__profile p {
+  text-align: justify;
+  text-justify: distribute;
+}
+.team-members__picture {
+  margin: 0 0 16px 0;
+  padding: 0;
+  width: 175.95px;
+  height: 175.95px;
+  align-items: center;
+}
+.team-members__profile img{
+  width: 100%;
+  border-radius: 100px;
+}
+.team-members__profile span {
+  font-size: 24px;
+}

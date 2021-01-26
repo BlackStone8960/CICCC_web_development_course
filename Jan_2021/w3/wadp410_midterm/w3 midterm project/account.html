@@ -1,0 +1,199 @@
+<!-- 
+  Author of this file : Taichi Ishiguro 
+  Collaborator : Miyabi Tanimichi (who makes other files)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/account.css">
+  <link rel="stylesheet" href="css/aboutus.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+  <title>M&T, Inc.</title>
+</head>
+<body>
+  <div class="aboveHeader">
+    <nav class="navAboveHeader">
+        <a href="#">Contact Us</a>
+        <label for="language">Language:</label>
+        <select name="language" id="chooseLang">
+            <option value="english">English</option>
+            <option value="frenh">Français</option>
+        </select>
+    </nav>
+  </div>
+  <div class="headerBlock">
+    <div class="logo">
+      <a href="index.html" class="logoLink"><i class="fas fa-user-secret"></i>M&T, Inc.</a>
+    </div>
+    <nav class="navInHeader">
+        <ul>
+            <li><a href="#">NEW</a></li>
+            <li><a href="#">SALE</a></li>
+            <li><a href="#">WOMEN</a></li>
+            <li><a href="#">MEN</a></li>
+            <li><a href="#">UNISEX</a></li>
+            <li><a href="#">KIDS</a></li>
+            <li><a href="#">ACCSESSORIES</a></li>
+        </ul>
+    </nav>
+    <nav class="navInHeader-icon">
+      <form class="iconAndSearch">
+        <input class="search-input" type="search" placeholder="Search items">
+        <button class="search-button"><i class="fas fa-search"></i></button>
+      </form>
+      <div class="iconAndSearch">
+        <a href="account.html"><i class="far fa-user"></i></a>
+      </div>
+      <div class="iconAndSearch">
+          <a href="#"><i class="far fa-heart"></i></a>
+      </div>
+      <div class="iconAndSearch">
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+      </div> 
+    </nav>
+  </div>
+
+  <!-- Main content -->
+  <section class="main-wrapper">
+    <div class="navigation">
+      <nav><a href="index.html">Main Page </a> > <b>Account</b></nav>
+    </div>
+    <h1 class="main-title">ACCOUNT</h1>
+    <div class="main-contents">
+      <div class="main-left-side">
+        <form action="#">
+          <div class="form-one-block">
+            <div class="label-wrapper">
+              <label for="first-name">First Name</label>
+            </div>
+            <input type="text" id="first-name" name="first-name" value="Cloud" required>  
+          </div>
+          <div class="form-one-block">
+            <div class="label-wrapper">
+              <label for="last-name">Last Name</label>
+            </div>
+            <input type="text" id="last-name" name="last-name" value="Strife" required>  
+          </div>
+          <div class="form-one-block">
+            <div class="label-wrapper">
+              <label for="gender">Gender</label>
+            </div>
+            <div class="radio-wrapper">
+              <input type="radio" id="gender" name="gender" value="male" checked><span>Male</span>
+              <input type="radio" id="gender" name="gender" value="female"><span>Female</span> 
+              <input type="radio" id="gender" name="gender" value="other"><span>Other</span>
+            </div>
+          </div>
+          <div class="form-one-block">
+            <div class="label-wrapper">
+              <label for="Email">Email</label>
+            </div>
+            <input type="email" id="Email" name="Email" value="chocobo-lover@shinra.com" required>  
+          </div>
+          <div class="form-one-block">
+            <div class="label-wrapper">
+              <label for="password">Password</label>
+            </div>
+            <button class="change-password">Change Password</button>
+          </div>
+          <div class="form-one-block">
+            <div class="label-wrapper">
+              <label for="postal-code">Postal Code</label>
+            </div>
+            <input type="text" id="postal-code" name="postal-code" value="V42-N72" required>  
+          </div>
+          <div class="form-one-block">
+            <div class="label-wrapper">
+              <label for="birthday">Birthday</label>
+            </div>
+            <input type="text" id="birthday" name="birthday" value="11-8-1992" required>
+          </div>
+          <div class="form-one-block">
+            <div class="label-wrapper">
+              <label for="postal-code">Postal Code</label>
+            </div>
+            <input type="text" id="postal-code" name="postal-code" value="V3Q-5K8" required>  
+          </div>
+          <div class="barcode-block">
+            <div class="label-wrapper">
+              <span>Membership Barcode</span>
+            </div>
+            <figure>
+              <img src="img/barcode_sample.jpg" alt="barcode" id="barcode">
+              <figcaption>Please show your membership barcode at the cashier when you purchase items.</figcaption>
+            </figure>
+          </div>
+          <input type="submit" value="Save" id="submit-button">
+        </form>
+      </div>
+      <div class="main-right-side">
+        <a href="#">Account</a>
+        <a href="#">Coupons</a>
+        <a href="#">Purchase history</a>
+        <a href="#">Order history</a>
+        <a href="#">My credit card</a>
+        <a href="#">Withdrawal from membership</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <ul class="former-footer">
+      <li class="list-block">
+        <ul class="inside-block">
+          <li class="inside-block__title"><h1>Items</h1></li>
+          <li>Tops</li>
+          <li>Trouser</li>
+          <li>Skirt</li>
+        </ul>
+      </li>
+      <li class="list-block">
+        <ul class="inside-block">
+          <li class="inside-block__title"><h1>About Us</h1></li>
+          <li><a href="aboutus.html">Life Wear</a></li>
+          <li><a href="aboutus.html">Information</a></li>
+          <li><a href="aboutus.html">Careers</a></li>
+          <li><a href="aboutus.html">Sustainability</a></li>
+        </ul>
+      </li>
+      <li class="list-block">
+        <ul class="inside-block">
+          <li class="inside-block__title"><h1>Account</h1></li>
+          <li><a href="account.html">Membership</a></li>
+          <li><a href="account.html">Profile</a></li>
+          <li><a href="account.html">Coupons</a></li>
+        </ul>
+      </li>
+      <li class="list-block">
+        <ul class="inside-block">
+          <li class="inside-block__title"><h1>Help</h1></li>
+          <li>FAQ</li>
+          <li>Contact Us</li>
+          <li>Return Policy</li>
+          <li>Accesibility</li>
+        </ul>
+      </li>
+      <li class="media-block">
+        <h1 class="inside-block__title">Social Account</h1>
+        <div class="media-icon-lists">
+          <a href="#"><img src="img/Twitter_icon.png" alt="Twitter_icon"></a>
+          <a href="#"><img src="img/facebook_icon.png" alt="facebook_icon"></a>
+          <a href="#"><img src="img/Instagram_icon.png" alt="Instagram_icon"></a>
+        </div>
+      </li>
+    </ul>
+    <div class="language-option">
+      <div>English</div>
+      <div>Français</div>
+    </div>
+    <hr>
+    <span>COPYRIGHT © xxxxxxx .inc. ALL RIGHTS RESERVED.</span>
+  </footer>    
+</body>
+</html>

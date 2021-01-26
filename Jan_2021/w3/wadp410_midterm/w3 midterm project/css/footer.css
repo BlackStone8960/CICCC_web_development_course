@@ -1,0 +1,66 @@
+/*  
+  Author of this file : Taichi Ishiguro 
+  Collaborator : Miyabi Tanimichi (who makes other files)
+ */
+
+footer {
+  background-color: #333;
+  width: 100%;
+  color: #fff;
+  opacity: 1;
+  padding: 40px 80px 20px;
+  box-sizing: border-box;
+}
+.list-block {
+  margin-right: 100px;
+}
+.list-block a {
+  color: #fff;
+  text-decoration: none;
+}
+.former-footer {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  list-style: none;
+  margin-bottom: 50px;
+}
+.list-block li h1{
+  font-size: 20px;
+}
+.inside-block {
+  list-style: none;
+  font-size: 16px;
+}
+.media-icon-lists {
+  display: flex;
+  flex-flow: row;
+  margin-top: 5px;
+}
+.media-block h1 {
+  font-size: 20px;
+}
+.media-icon-lists img {
+  width: 25px;
+  display: inline-block;
+  margin-right: 7px;
+}
+.language-option {
+  display: flex;
+  flex-flow: row;
+}
+.language-option div {
+  padding-right: 10px;
+}
+.language-option div:last-of-type {
+  padding-left: 10px;
+}
+.language-option div:first-child {
+  border-right: 1px solid #fff;
+}
+footer hr {
+  margin: 16px calc(50% - 50vw);
+}
+.inside-block__title {
+  margin-bottom: 14px;
+}

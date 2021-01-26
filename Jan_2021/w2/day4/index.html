@@ -1,0 +1,87 @@
+<!-- Taichi Ishiguro (Coded by myself) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/box.css">
+</head>
+<body>
+  <nav>
+    <h1 class="header-title">Awesome CSS</h1>
+    <ul class="header-menu">
+      <li><a href="index.html">Box model</a></li>
+      <li><a href="display.html">display</a></li>
+      <li><a href="overflow.html">overflow</a></li>
+      <li><a href="transform.html">transform</a></li>
+    </ul>
+  </nav>
+  <figure class="main-bannar">
+    <img src="img/css-bannar.png" alt="main-bannar">
+  </figure>
+  <section class="main-wrapper">
+    <h1 class="main-title">Box model</h1>
+    <h2 class="second-title">How to space between elements?</h2>
+    <article>
+      <p>When we consider about spacing between elements, every elements can be considered as box.</p>
+      <p>
+        Look at a following figure. When you want to put the picture or the text, it is called as <b>content</b> in HTML. We can configure width and height of content using CSS.
+        Content can be wrapped by the space called <b>padding</b>. And we can set a line called <b>border</b> which goes around content and padding as well.  
+        If we want to space between elements, we can space using <b>margin</b>. 
+      </p>
+      <figure class="box_model">
+        <img src="img/box_model.png" alt="box_model">
+      </figure>
+      <p>
+        You can configure each direction of padding by using padding-top, padding-right, padding-bottom, padding-left 
+        which means the direction of top, right, bottom, left respectively.
+      </p>
+      <p>
+        And also you can code it using shorthand syntax, like <b>padding: 1px 2px 3px 4px;</b>. 
+        When you code using this style, the order of directions will be top, right, bottom, left from left parameter to right one.
+        You can also set margin by the same way as padding.
+      </p>
+      <div class="padding_direction">
+        <div class="padding_direction__description">
+          <div>
+            padding-top: 1px;<br>
+            padding-right: 2px;<br>
+            padding-bottom: 3px;<br>
+            padding-left: 4px;<br>  
+          </div>
+          <div>||</div>
+          <div>
+            padding: 
+            <span class="colored_direction" id="top">1px</span>
+            <span class="colored_direction" id="right">2px</span>
+            <span class="colored_direction" id="bottom">3px</span>
+            <span class="colored_direction" id="left">4px;</span>
+          </div>
+        </div>
+        <figure class="padding_direction__figure">
+          <img src="img/box_model_padding direction.png" alt="padding_direction">
+        </figure>
+      </div>
+      <p>
+        This is how we can space between elements. The spacing is so important thing when designing web sites, 
+        so let's try to style your site using margin or padding. Have a good coding day :)
+      </p>
+    </article>
+  </section>
+  <footer>
+    <div class="title-link">
+      <h1>Awesome CSS</h1>
+      <ul class="footer-menu">
+        <li><a href="index.html">Box model</a></li>
+        <li><a href="display.html">display</a></li>
+        <li><a href="overflow.html">overflow</a></li>
+        <li><a href="transform.html">transform</a></li>
+      </ul>  
+    </div>
+    <div>
+      Contact Information: abcdefg@defjiej.com
+    </div>
+  </footer>
+</body>
+</html>

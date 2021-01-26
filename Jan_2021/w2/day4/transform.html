@@ -1,0 +1,131 @@
+<!-- Taichi Ishiguro (Coded by myself) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/transform.css">
+</head>
+<body>
+  <nav>
+    <h1 class="header-title">Awesome CSS</h1>
+    <ul class="header-menu">
+      <li><a href="index.html">Box model</a></li>
+      <li><a href="display.html">display</a></li>
+      <li><a href="overflow.html">overflow</a></li>
+      <li><a href="transform.html">transform</a></li>
+    </ul>
+  </nav>
+  <figure class="main-bannar">
+    <img src="img/css-bannar.png" alt="main-bannar">
+  </figure>
+  <section class="main-wrapper">
+    <div class="main-introduction">
+      <h1 class="main-title">The way to use transform property</h1>
+      <p>
+        Transform property is used when move/rotate/scale/skew elements.
+        There are four functions following for it, and you can use them as the value of this property.
+        Each functions need parameters which mean the direction or angle associated with elements transforming.
+      </p>
+      <ol class="value-list">
+        <li class="main-indent">
+          <b>translate</b>(translation length along x-axis, translation length along y-axis) : You can move elements along defined values
+        </li>
+        <li>
+          <b>rotate</b>(angle) : Allows you to rotate elements by defined degrees
+        </li>
+        <li>
+          <b>scale</b>(ratio of scaling width, ratio of scaling height) : You can scale elements by defined ratio
+        </li>
+        <li>
+          <b>skew</b>(angle x-axis tilts by, angle x-axis tilts by) : This allows you to skew elements by defined angles
+        </li>
+      </ol>  
+      <p>
+        Will describe how contents will be transformed when "transform" is used. 
+        I used "transition", and took time interval of 1 sec to make it easy to understand what happened.
+      </p>
+    </div>
+    <div class="main-example__wrapper">
+      <div class="main-example">
+        <h1>transform: translate();</h1>
+        <hr>
+        <div class="description_example">
+          <div class="description_sentence">
+            <p>
+              Hover the mouse onto a right square. When you use translate() for value of "transform", it will be like this.<br>
+              You will find that you can move the elements.
+            </p>
+            <p>
+              I coded as <span class="colored-text">transform: translate(35px, 35px);</span>, so it moved 35px along each x-axis and y-axis. 
+              You can also set just one argument to move along one axis.
+            </p>  
+          </div>
+          <div class="transform_example" id="translate"></div>
+        </div>
+      </div>
+      <div class="main-example">
+        <h1>transform: scale();</h1>
+        <hr>
+        <div class="description_example">
+          <div class="description_sentence">
+            <p>
+              When you use scale(), it will be like this.<br>
+            </p>
+            <p>
+              I coded as <span class="colored-text">transform: scale(0.75, 0.75);</span>, so its width and height were scaled by 0.75, so it means shrinked by 0.75. 
+            </p>  
+          </div>
+          <div class="transform_example" id="scale"></div>
+        </div>
+      </div>
+      <div class="main-example">
+        <h1>transform: rotate();</h1>
+        <hr>
+        <div class="description_example">
+          <div class="description_sentence">
+            <p>
+              When you use translate(), it will be like right square.<br>
+              You will find that you can rotate the elements.
+            </p>
+            <p>
+              I coded as <span class="colored-text">transform: rotate(180deg);</span>, so it was rotated by 180 degree. 
+            </p>  
+          </div>
+          <div class="transform_example" id="rotate"></div>
+        </div>
+      </div>
+      <div class="main-example">
+        <h1>transform: skew();</h1>
+        <hr>
+        <div class="description_example">
+          <div class="description_sentence">
+            <p>
+              At last, what will happen if you use skew()? Hover the mouse onto the square. It will be skewed.
+            </p>
+            <p>
+              I coded as <span class="colored-text">transform: skew(22.5deg, 22.5deg);</span>, so x-axis and y-axis were tilted by 22.5 degree. 
+            </p>  
+          </div>
+          <div class="transform_example" id="skew"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="title-link">
+      <h1>Awesome CSS</h1>
+      <ul class="footer-menu">
+        <li><a href="index.html">Box model</a></li>
+        <li><a href="display.html">display</a></li>
+        <li><a href="overflow.html">overflow</a></li>
+        <li><a href="transform.html">transform</a></li>
+      </ul>  
+    </div>
+    <div>
+      Contact Information: abcdefg@defjiej.com
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* Taichi Ishiguro */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    vertical-align:baseline;
+    /* background:transparent; */
+}
+
+/* ================= Header ================= */
+header {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header h1,
+footer h1 {
+  text-align: center;
+  margin: 4vw 0;
+}
+
+/* ================= Navigation ================= */
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media screen and (max-width: 959px) {
+  .nav-links {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 480px) {
+  .nav-links {
+    flex-direction: column;
+  }
+}
+
+.nav-links li {
+  width: 25vw;
+  box-sizing: border-box;
+  border: 1px solid #333;
+  border-left: none;
+  list-style: none;
+  text-align: center;
+  padding: 1vw 0;
+}
+@media screen and (max-width: 959px) {
+  .nav-links li {
+    width: 50%;
+  }
+  .nav-links li:first-child,
+  .nav-links li:nth-child(2) {
+    border-bottom: none;
+  }
+  .nav-links li:nth-child(2n) {
+    border-right: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .nav-links li {
+    width: 100%;
+    border-right: none;
+  }
+  .nav-links li:nth-child(3) {
+    border-bottom: none;
+  }
+}
+
+.nav-links li:last-of-type {
+  border-right: none;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+
+/* ================= Main ================= */
+.main-wrapper {
+  width: 80vw;
+  margin: 8vw auto;
+  padding: 6vw 1vw;
+  box-sizing: border-box;
+  border: 1px solid #333;
+}
+@media screen and (max-width: 480px) {
+  .main-wrapper {
+    padding: 6vw 2vw;
+  }
+}
+.img-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.img-wrapper img {
+  width: 30%;
+  height: 30%;
+  margin-bottom: 6vw;
+}
+@media screen and (max-width: 959px) {
+  .img-wrapper img{
+    width: 45%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .img-wrapper img{
+    width: 100%;
+  }
+}
+.img-wrapper img:nth-child(4),
+.img-wrapper img:nth-child(5),
+.img-wrapper img:nth-child(6) {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 959px) {
+  .img-wrapper img:nth-child(4) {
+    margin-bottom: 6vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .img-wrapper img:nth-child(5) {
+    margin-bottom: 6vw;
+  }
+}
+
+/* ================= Footer ================= */
+footer {
+  width: 100%;
+  border-top: 1px solid #333;
+}
+
+footer h1 {
+  font-size: 16px;
+}

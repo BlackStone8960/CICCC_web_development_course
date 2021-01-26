@@ -1,0 +1,336 @@
+/*  
+  Author of this file : Miyabi Tanimichi 
+  Collaborator : Taichi Ishiguro (who makes other files)
+ */
+
+@import 'common.css';
+@import 'header.css';
+@import 'footer.css';
+
+.mainContent {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+/* color of main page */
+
+.navigation nav {
+    color:  #262626;
+    margin-top: 20px;
+    margin-left: 70px;
+    margin-bottom: 90px;
+}
+
+.navigation nav a {
+    color: #4d4d4d;
+}
+
+.navigation nav a:visited {
+    color: #262626;
+}
+/* color of main page */
+
+.container-item {                /* container justify-content flex-start */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.container-image {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+}
+
+.container-item .container-image .anglePhoto { 
+    margin-left: 60px;
+}
+
+.anglePhoto .angle1 {
+    border: 1px solid #262626;
+    border-radius: 7px;
+    margin: 0 10px 10px 10px;
+    padding: 40px;
+    background-image: url(../img/tranding3.jpeg);
+    background-size: cover;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.anglePhoto .angle1:hover {
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.anglePhoto .angle2 {
+    border: 1px solid #262626;
+    border-radius: 7px;
+    margin: 10px;
+    padding: 40px;
+    background-image: url(../img/tranding3.jpeg);
+    background-size: cover;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.anglePhoto .angle2:hover {
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.anglePhoto .angle3 {
+    border: 1px solid #262626;
+    border-radius: 7px;
+    margin: 10px;
+    padding: 40px;
+    background-image: url(../img/tranding3.jpeg);
+    background-size: cover;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.anglePhoto .angle3:hover {
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.anglePhoto .angle4 {
+    border: 1px solid #262626;
+    border-radius: 7px;
+    margin: 10px;
+    padding: 40px;
+    background-image: url(../img/tranding3.jpeg);
+    background-size: cover;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.anglePhoto .angle4:hover {
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.imageAndColor .mainImage {
+    background-image: url(../img/tranding3.jpeg);
+    background-size: cover;
+    border-radius: 15px;
+    left: 230px;
+    top: 50px;
+    width: 400px;
+    height: 570px;
+}
+
+.imageAndColor .colorVariation {
+    display: flex;
+    margin-top: 10px;
+}
+
+.colorVariation .color1 {
+    padding: 15px;
+    border: 1px solid #262626;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.colorVariation .color1:hover {
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.colorVariation .color2 {
+    padding: 15px;
+    border: 1px solid #262626;
+    border-radius: 50%;
+    background-color: beige;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.colorVariation .color2:hover {
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.colorVariation .color3 {
+    padding: 15px;
+    border: 1px solid #262626;
+    border-radius: 50%;
+    background-color: gray;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.colorVariation .color3:hover {
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.colorVariation .color4 {
+    padding: 15px;
+    border: 1px solid #262626;
+    border-radius: 50%;
+    background-color: navy;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.colorVariation .color4:hover {
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.colorVariation .color5 {
+    padding: 15px;
+    border: 1px solid #262626;
+    border-radius: 50%;
+    background-color: black;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.colorVariation .color5:hover {
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.container-descri {
+    margin-left: 100px;
+}
+
+.container-descri h1 span {
+    background-color: tomato;
+    border-radius: 20px;
+    font-size: 22px;
+    padding: 5px;
+}
+
+.container-descri p {
+    color: red;
+    font-size: 27px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.container-descri .letterSize {
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.container-descri .letterQty {
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.container-number .number {
+    padding: 3px 5px;
+}
+
+.container-descri .addToCart {
+    padding: 14px 120px;
+    background-color: #ff3300;
+    color: white;
+    font-size: 20px;
+    margin-top: 150px;
+    border: 1px solid #4d4d4d;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.container-descri .favourite {
+    padding: 14px 115px;
+    background-color: #cccccc;
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+    border: 1px solid #4d4d4d;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.recently-viewed {
+    margin-top: 90px;
+  }
+  .recently-viewed p {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 70px;
+  }
+  .color-wrapper {
+    display: flex;
+    flex-flow: row;
+    justify-content: left;
+    /* align-items: baseline; */
+  }
+  .color-wrapper span {
+    display: block;
+    line-height: 1;
+  }
+  .color-tip {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+  }
+  #beige {
+    background-color: #D9D1BC;
+  }
+  #gray {
+    background-color: #9B9899;
+  }
+  #dark-gray {
+    background-color: #34302F;
+  }
+  #black {
+    background-color: #211F20;
+  }
+  #red {
+    background-color: #AA182D;
+  }
+  #brown {
+    background-color: #754E25;
+  }
+  #navy {
+    background-color: #2A2730;
+  }
+  
+  .viewed-list {
+    display: flex;
+    flex-flow: row;
+    justify-content: left;
+    margin-bottom: 40px;
+    margin-left: 70px;
+  }
+  .viewed-merchandise {
+    list-style: none;
+    margin-right: 20px;
+  }
+  .viewed-merchandise img {
+    width: 220px;
+  }
+  /* .rating {
+    display: flex;
+    flex-flow: row;
+  } */
+  .rating__star {
+    display: inline-block;
+    /* margin-right: 2px; */
+  }
+  .rating__star img {
+    width: 12px;
+    height: 12px;
+  }
+  .cost {
+    font-weight: bold;
+    margin: 21px 0 7px;
+  }
+  .subtotal-left-side {
+    font-size: 16px;
+    font-weight: bold;
+  }
+

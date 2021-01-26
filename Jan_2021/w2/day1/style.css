@@ -1,0 +1,102 @@
+/* Taichi Ishiguro Morning */
+body {
+  background-color: #ffedbf;
+}
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 15px;
+}
+header {
+  color: #9b2948;
+}
+.main-title {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.sub-title {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+#main {
+  font-size: 44px;
+}
+#sub {
+  font-size: 20px;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #ffca7b;
+  border-bottom: 1px solid #000;
+}
+nav ul {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  list-style: none;
+  margin: 2px 0;
+  padding: 0;
+  font-size: 20px;
+  z-index: 100;
+}
+nav ul li a {
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: red;
+  text-decoration: underline;
+}
+.key-visual img {
+  width: 550px;
+  border: 6px solid #ff7251;
+}
+
+.paragraphs {
+  text-align: left;
+  font-family: 'Noto Serif JP', serif;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: .5px;
+  margin-top: 33px;
+}
+.paragraphs p::first-letter {
+  font-size: 30px;
+}
+.paragraphs p::first-line {
+  background-color: #ff7251;
+}
+.float-left {
+  float: left;
+}
+p.float-left {
+  width: 60%;
+}
+.clear-left {
+  clear: left;
+}
+.float-img {
+  width: 35%;
+  margin: 0 5% 16px 0;
+}
+.detail-information {
+  text-align: center;
+}
+.name-and-position {
+  border-collapse: collapse;
+  margin: 40px auto 0;
+  padding: 1px;
+  border: 3px solid #9b2948;
+  font-size: 21px;
+}
+.name-and-position th,
+.name-and-position td {
+  padding: 10px 20px;
+  border: 1px solid #9b2948;
+}
+.table-heading {
+  text-align: center;
+  font-weight: bold;
+}

@@ -1,0 +1,99 @@
+<!-- Taichi Ishiguro (Coded by myself) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/display.css">
+</head>
+<body>
+  <nav>
+    <h1 class="header-title">Awesome CSS</h1>
+    <ul class="header-menu">
+      <li><a href="index.html">Box model</a></li>
+      <li><a href="display.html">display</a></li>
+      <li><a href="overflow.html">overflow</a></li>
+      <li><a href="transform.html">transform</a></li>
+    </ul>
+  </nav>
+  <figure class="main-bannar">
+    <img src="img/css-bannar.png" alt="main-bannar">
+  </figure>
+  <section class="main-wrapper">
+    <h1 class="main-title">The way to use display property</h1>
+    <p>
+      Display, the property is used to how the elements will be displayed in the web sites.
+      There are mainly four values following for this property.
+    </p>
+    <ol class="value-list">
+      <li class="main-indent">
+        <b>block</b> : Elements occupy 100% width of parent elements, and it line up vertically<br>
+        <b>p, div, ul, h1〜h6</b> etc. tags are block-level elements
+      </li>
+      <li class="main-indent">
+        <b>inline</b> : Elements line up horizontally<br>
+        <b>a, span, img</b> etc. tags are inline elements
+      </li>
+      <li><b>inline-block</b> : Elements line up horizontally, and its size is adjustable</li>
+      <li><b>none</b> : Elements are removed from layout</li>
+    </ol>
+    <p>
+      Made a list of behaviors of this property as follows.  
+    </p>
+    <table class="display_table">
+      <tr class="display_table__header">
+        <th>display:</th>
+        <th>block</th>
+        <th>inline</th>
+        <th>inline-block</th>
+      </tr>
+      <tr class="line_up">
+        <td><b>How elements line up</b></td>
+        <td><img src="img/display_block.png" alt="display_block"></td>
+        <td><img src="img/display_inline.png" alt="display_inline"></td>
+        <td><img src="img/display_inline-block.png" alt="display_inline-block"></td>
+      </tr>
+      <tr>
+        <td><b>width & height</b></td>
+        <td>Adjustable</td>
+        <td>
+          Adjustable in the case of horizontal, but non-adjustable for vertical margin<br> 
+          Vertical padding is adjustable, but it will be pilled up on top and bottom lines
+        </td>
+        <td>Adjustable</td>
+      </tr>
+      <tr>
+        <td><b>text-align</b></td>
+        <td>Not adjustable</td>
+        <td>Adjustable (Set on the parent element)</td>
+        <td>Adjustable (Set on the parent element)</td>
+      </tr>
+      <tr>
+        <td><b>vertical-align</b></td>
+        <td>Not adjustable</td>
+        <td>Adjustable</td>
+        <td>Adjustable</td>
+      </tr>
+    </table>
+    <p>
+      You can change feature of element by using display property even if it is inappropriate one.<br>
+      Style as you like using display!
+    </p>
+  </section>
+  <footer>
+    <div class="title-link">
+      <h1>Awesome CSS</h1>
+      <ul class="footer-menu">
+        <li><a href="index.html">Box model</a></li>
+        <li><a href="display.html">display</a></li>
+        <li><a href="overflow.html">overflow</a></li>
+        <li><a href="transform.html">transform</a></li>
+      </ul>  
+    </div>
+    <div>
+      Contact Information: abcdefg@defjiej.com
+    </div>
+  </footer>
+</body>
+</html>

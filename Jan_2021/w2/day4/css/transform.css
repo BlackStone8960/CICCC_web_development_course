@@ -1,0 +1,33 @@
+/* Taichi Ishiguro (Coded by myself) */
+
+.main-example {
+  margin-top: 60px;
+}
+.colored-text {
+  background-color: #e0db30;
+  font-weight: bold;
+}
+.transform_example {
+  width: 150px;
+  height: 150px;
+  background-color: #30ACE0; 
+  transition: 1s;
+  margin-right: 70px;
+}
+.content-wrapper p {
+  margin: 0;
+  padding: 0;
+}
+
+#translate:hover {
+  transform: translate(35px, 35px);
+}
+#rotate:hover {
+  transform: rotate(180deg);
+}
+#scale:hover {
+  transform: scale(0.75, 0.75);
+}
+#skew:hover {
+  transform: skew(22.5deg, 22.5deg);
+}

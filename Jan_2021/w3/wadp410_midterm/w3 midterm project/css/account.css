@@ -1,0 +1,63 @@
+/*  
+  Author of this file : Taichi Ishiguro 
+  Collaborator : Miyabi Tanimichi (who makes other files)
+ */
+.navigation nav {
+  margin-left: 0 !important;
+}
+.label-wrapper {
+  width: 200px;
+  text-align: right;
+  display: inline-block;
+  margin-right: 16px;
+}
+.selection-wrapper {
+  display: inline-block;
+}
+.selection-wrapper select {
+  height: 28px;
+}
+.form-one-block input[type="text"],
+.form-one-block input[type="email"] {
+  width: 520px;
+  height: 24px;
+}
+.form-one-block {
+  margin-bottom: 24px;
+}
+.barcode-block figure {
+  width: 520px;
+}
+.barcode-block {
+  display: flex;
+  align-items: flex-start;
+}
+.change-password {
+  padding: 4px 12px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 4px;
+}
+.radio-wrapper {
+  display: inline-flex;
+}
+.radio-wrapper span {
+  margin-right: 16px;
+  line-height: 1.3;
+}
+.radio-wrapper input {
+  margin-right: 6px;
+}
+#barcode {
+  width: 200px;
+}
+#submit-button {
+  display: block;
+  margin: 32px 0 0 216px;
+  padding: 10px 30px;
+  font-weight: bold;
+  background-color: #fff;
+  color: #000;
+  border-radius: 4px;
+  font-size: 16px;
+}

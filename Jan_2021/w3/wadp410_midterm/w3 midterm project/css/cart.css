@@ -1,0 +1,126 @@
+/*  
+  Author of this file : Taichi Ishiguro 
+  Collaborator : Miyabi Tanimichi (who makes other files)
+ */
+.navigation nav {
+  margin-left: 0 !important;
+}
+.main-wrapper {
+  margin: 10px auto;
+  width: 1100px;  
+}
+.main-title {
+  margin: 20px 0;
+}
+.navigation nav {
+  color: #262626;
+  margin-top: 20px;
+  margin-bottom: 90px;
+}
+.cart-contents {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.item-lists {
+  list-style: none;
+}
+.item-list {
+  display: flex;
+  justify-content: space-between;
+  width: 650px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #dadada;
+  margin: 28px 0;
+  align-items: flex-start;
+}
+.item-list--first {
+  margin-top: 0;
+}
+.item-list img {
+  width: 180px;
+  height: 180px;
+  border-radius: 15px;
+}
+.image-link {
+  display: block;
+  height: 180px;
+}
+.text-link {
+  color: #000;
+  text-decoration: none;
+}
+.item-calculation {
+  width: 450px;
+  position: relative;
+}
+.item-list__title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.remove-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.subtotal {
+  border: 1px solid #ccc;
+  width: 300px;
+  padding: 24px 20px;
+}
+.subtotal-title {
+  margin-bottom: 24px;
+}
+.subtotal-inline {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row;
+  margin-bottom: 10px;
+}
+.subtotal-inline--margin-bottom {
+  margin-bottom: 3px;
+}
+.subtotal-inline--last {
+  margin-bottom: 0;
+}
+.subtotal-bold {
+  font-weight: bold;
+}
+#quantity {
+  display: block;
+  width: 40px;
+}
+.quantity_cost {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row;
+  margin-top: 2px;
+}
+.purchase-button {
+  text-align: center;  
+  background-color: red;
+  padding: 12px 0;
+  margin-top: 12px;
+  border: 1px solid #000;
+}
+.purchase-button a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+.whitening {
+  background-color: #fff;
+}
+.whitening a {
+  color: #000;
+}
+.cost {
+  font-weight: bold;
+  margin: 21px 0 7px;
+}
+.subtotal-left-side {
+  font-size: 16px;
+  font-weight: bold;
+}

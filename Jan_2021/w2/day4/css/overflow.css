@@ -1,0 +1,29 @@
+/* Taichi Ishiguro (Coded by myself) */
+
+.main-example {
+  margin-top: 60px;
+}
+.content-wrapper {
+  width: 150px;
+  height: 100px;
+  padding: 16px;
+  border: 1px solid #000;
+  text-align: center;
+  margin-right: 50px;
+}
+.content-wrapper p {
+  margin: 0;
+  padding: 0;
+}
+#visible {
+  overflow: visible;
+}
+#scroll {
+  overflow: scroll;
+}
+#hidden {
+  overflow: hidden;
+}
+#auto {
+  overflow: auto;
+}

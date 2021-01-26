@@ -1,0 +1,135 @@
+/*  
+  Author of this file : Miyabi Tanimichi 
+  Collaborator : Taichi Ishiguro (who makes other files)
+ */
+
+.aboveHeader {
+    background-color: #fff3e6;
+    width: 100%;
+    height: 30px;
+}
+
+.aboveHeader .navAboveHeader {
+    float: right;
+    margin: 5px 20px;
+}
+
+.navAboveHeader a {
+    color: #1a1a1a;
+}
+
+.headerBlock {
+    top: 0px;
+    position: sticky;
+    width: 100%;
+    background-color: rgb(0, 0, 0, .3);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 100;
+}
+
+.headerBlock:hover {
+    background-color: rgba(0, 0, 0, .7);
+    transition: .5s;
+}
+
+.logo {
+    margin-top: 25px;
+    margin-left: 30px;
+    font-size: 25px;
+    font-style: italic;
+    z-index: 100;
+}
+
+.logo .logoLink {
+    text-decoration: none;
+    color: white;
+}
+
+.navInHeader ul {
+    list-style: none;
+    text-align: center;
+}
+
+.headerBlock .navInHeader ul li {
+    display: inline;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.headerBlock .navInHeader ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    position: relative;
+}
+
+.navInHeader ul li a::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    top: 100%;
+    left: 0;
+    background: white;
+    transition: transform .5s;
+    transform: scale(0);
+    transform-origin: right;
+}
+
+.navInHeader ul li a:hover {
+    color: #95a5a6;
+}
+
+.navInHeader ul li a:hover::after {
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.navInHeader-icon {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* .navInHeader-icon a {
+    color: white;
+} */
+
+.navInHeader-icon .iconAndSearch {
+    font-size: 25px;
+    padding-right: 15px;
+    padding-top: 20px;
+    position: relative;
+  }
+  
+  .navInHeader-icon .iconAndSearch .search-input {
+      padding: 7px 7px;
+      background-color: rgba(0, 0, 0, .2);
+      border: 2px solid white;
+      border-radius: 2px;
+      color: white;
+      font-size: 16px;
+  }
+
+  .navInHeader-icon .iconAndSearch .search-input::placeholder {
+    color: rgba(255, 255, 255, .7);
+}
+
+.navInHeader-icon .iconAndSearch .search-button {
+    position: absolute;
+    left: 150px;
+    top: 25px;
+    padding: 7px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    /* text-decoration: none; */
+    color: rgba(255, 255, 255, .9);
+}
+
+.search-button:focus {
+    outline: none;
+}
+
+.navInHeader-icon a {
+    color: white;
+}

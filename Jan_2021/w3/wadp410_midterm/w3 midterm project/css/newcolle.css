@@ -1,0 +1,92 @@
+/*  
+  Author of this file : Miyabi Tanimichi 
+  Collaborator : Taichi Ishiguro (who makes other files)
+ */
+
+@import 'common.css';
+@import 'header.css';
+@import 'footer.css';
+
+.mainContent {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.h1title {
+    text-align: center;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 45px;
+    margin-bottom: 120px;
+    color: #292929;
+}
+
+h2 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #292929;
+}
+
+.newColle1 {
+    display: flex;                  /* display flex*/
+    justify-content: center;
+    padding-bottom: 30px;
+    border-bottom: 1px dotted #292929;
+}
+
+.newColle1 .newColleImg1 {
+    background-image: url(../img/newcolle1.jpeg);   /* background-image n size */
+    background-size: cover;
+    height: 300px;
+    width: 1000px;
+    margin-left: 50px;
+}
+
+.newColle1 .description1 {
+    padding: 0 50px 0px 50px;
+}
+
+.newColle2 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    border-bottom: 1px dotted #292929;
+    margin-top: 30px;
+}
+
+.newColle2 .newColleImg2 {
+    background-image: url(../img/newcolle2.jpeg);
+    background-size: cover;
+    height: 300px;
+    width: 1000px;
+    margin-right: 50px;
+}
+
+.newColle2 .description2 {
+    padding: 0 50px 0px 50px;
+}
+
+.newColle3 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    border-bottom: 1px dotted #292929;
+    margin-top: 30px;
+    margin-bottom: 150px;
+}
+
+.newColle3 .newColleImg3 {
+    background-image: url(../img/newcolle3.jpeg);
+    background-size: cover;
+    height: 300px;
+    width: 1000px;
+    margin-left: 50px;
+}
+
+.newColle3 .description3 {
+    padding: 0 50px 0px 50px;
+}
+
+p {
+    text-align: justify;                         /*justify*/
+}

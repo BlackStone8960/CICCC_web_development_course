@@ -1,0 +1,117 @@
+<!-- Taichi Ishiguro (Coded by myself) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/overflow.css">
+</head>
+<body>
+  <nav>
+    <h1 class="header-title">Awesome CSS</h1>
+    <ul class="header-menu">
+      <li><a href="index.html">Box model</a></li>
+      <li><a href="display.html">display</a></li>
+      <li><a href="overflow.html">overflow</a></li>
+      <li><a href="transform.html">transform</a></li>
+    </ul>
+  </nav>
+  <figure class="main-bannar">
+    <img src="img/css-bannar.png" alt="main-bannar">
+  </figure>
+  <section class="main-wrapper">
+    <div class="main-introduction">
+      <h1 class="main-title">The way to use overflow property</h1>
+      <p>
+        You can use overflow property when your contents size is larger then parent elements.
+        There are four values following for it.
+      </p>
+      <ol class="value-list">
+        <li class="main-indent">
+          <b>visible</b> : Default value. Contents will be overflowed when parent elements are smaller than this content.
+        </li>
+        <li>
+          <b>hidden</b> : Contents won't be overflowed
+        </li>
+        <li><b>scroll</b> : Overflowed parts are visible by scrolling</li>
+        <li><b>auto</b> : The same as scroll basically, but scroll bar is added only when necessary</li>
+      </ol>  
+      <p>
+        Will describe how contents will be appeared when "overflow" is used.
+      </p>
+    </div>
+    <div class="main-example__wrapper">
+      <div class="main-example">
+        <h1>overflow: visible;</h1>
+        <hr>
+        <div class="description_example">
+          <p class="description_sentence">
+            When you use "visible" for value of "overflow", it will be like right figure.<br>
+            You will find that a content is overflowed from parent elements.<br>
+            If you don't set any value for overflow, it will be rendered like this.   
+          </p>
+          <div class="content-wrapper" id="visible">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis itaque minus id alias </p>
+          </div>
+        </div>
+      </div>
+      <div class="main-example">
+        <h1>overflow: hidden;</h1>
+        <hr>
+        <div class="description_example">
+          <p class="description_sentence">
+            When you use "hidden", it will be like right.<br>
+            You will find that a overflow is clipped, and the content is hidden as the name suggests.<br>
+          </p>
+          <div class="content-wrapper" id="hidden">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis itaque minus id alias </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-example">
+        <h1>overflow: scroll;</h1>
+        <hr>
+        <div class="description_example">
+          <p class="description_sentence">
+            When you use "scroll", it will be rendered like right figure.<br>
+            You will find that a overflow is clipped and scroll bar appeared.<br>
+          </p>
+          <div class="content-wrapper" id="scroll">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis itaque minus id alias </p>
+          </div>
+        </div>
+      </div>
+      <div class="main-example">
+        <h1>overflow: auto;</h1>
+        <hr>
+        <div class="description_example">
+          <p class="description_sentence">
+            When you use "auto", it will be like right figure.<br>
+            A content is hidden, and now you can scroll to see a hidden content using scroll bar.<br>
+            The difference is whether the horizontal scroll bar appears or not. That's because you don't have to scroll horizontally to see hidden content.
+          </p>
+          <div class="content-wrapper" id="auto">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis itaque minus id alias </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="title-link">
+      <h1>Awesome CSS</h1>
+      <ul class="footer-menu">
+        <li><a href="index.html">Box model</a></li>
+        <li><a href="display.html">display</a></li>
+        <li><a href="overflow.html">overflow</a></li>
+        <li><a href="transform.html">transform</a></li>
+      </ul>  
+    </div>
+    <div>
+      Contact Information: abcdefg@defjiej.com
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* Taichi Ishiguro (Coded by myself) */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+h1,h2,figure,ul,li,div,tr,td,th {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  font-size: 23px;
+}
+.header-title {
+  font-size: 28px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background-color: #000;
+  opacity: 0.93;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  box-sizing: border-box;
+  z-index: 100;
+}
+nav .header-menu {
+  list-style: none;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+nav .header-menu li {
+  border-right: 1px solid #fff;
+  margin: 0;
+}
+.header-menu li:first-of-type {
+  border-left: 1px solid #fff;
+}
+nav .header-menu li a {
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+  display: block;
+  padding: 5px 40px;
+  color: #fff;
+}
+nav .header-menu li a:hover {
+  text-decoration: underline;
+}
+.main-bannar {
+  padding-top: 52px;
+}
+.main-bannar img {
+  width: 100%;
+}
+.main-wrapper {
+  width: 1000px;
+  margin: 50px auto 200px;
+}
+.value-list {
+  margin: 40px 0;
+}
+.value-list li {
+  margin-bottom: 1em;
+}
+.main-title{
+  margin-bottom: 5px;
+}
+.description_example {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+}
+.description_sentence {
+  width: 700px;
+}
+footer {
+  width: 100%;
+  background-color: #000;
+  padding: 30px 60px 30px;
+  box-sizing: border-box;
+  color: #fff;
+}
+footer .title-link {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 90px;
+}
+.footer-menu {
+  list-style: none;
+  margin-right: 65px;
+}
+.footer-menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+.footer-menu li a:hover {
+  text-decoration: underline;
+}
