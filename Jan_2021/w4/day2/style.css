@@ -1,0 +1,128 @@
+/* Taichi Ishiguro Morning */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    vertical-align:baseline;
+}
+.container {
+  display: grid;
+  gap: 1.5vw;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 1fr 5fr 1fr;
+}
+@media (max-width: 959px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  header, nav, .container-item, footer {
+    grid-column: 1;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    grid-template-rows: 20vw 20vw 1fr 20vw;
+  }
+}
+header {
+  background-color: rgb(202, 0, 0);
+  grid-row: 1 / 2;
+  grid-column: 1 / 13;
+}
+
+nav {
+  background-color: aqua;
+  grid-row: 2 / 3;
+  grid-column: 1 / 13;
+}
+.container-item {
+  background-color: #333;
+  grid-row: 3;
+  grid-column: 1 / 9;
+}
+@media screen and (max-width: 959px) {
+  .container-item {
+    grid-column: 1 / 13;
+  }
+}
+aside {
+  background-color: #777;
+  grid-row: 3;
+  grid-column: 9 / 13;
+}
+@media screen and (max-width: 959px) {
+  aside {
+    display: none;
+  }
+}
+footer {
+  background-color: orangered;
+  grid-row: 4;
+  grid-column: 1 / 13;
+}
+
+.inside-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 3fr;
+}
+@media (max-width: 480px) {
+  .inside-container {
+    grid-template-rows: 1fr 20vw 3fr;
+  }
+}
+section {
+  background-color: orange;
+  grid-column: 1;
+  grid-row: 1;
+}
+.inside-container #heading {
+  background-color: palegreen;
+  grid-column: 1;
+  grid-row: 2;
+}
+article {
+  background-color:slateblue;
+  grid-column: 1;
+  grid-row: 3;
+  padding: 3vw 6vw;
+  box-sizing: border-box;
+}
+article p {
+  margin-bottom: 1em;
+}
+article p:last-of-type {
+  margin-bottom: 0;
+}
+.padding {
+  padding: 3vw 6vw;
+  box-sizing: border-box;
+}
+.big-font {
+  font-size: 24px;
+  font-weight: bold;  
+  white-space: nowrap;
+}
+@media (max-width: 959px) {
+  .big-font {
+    font-size: 21px;
+  }
+}
+@media (max-width: 480px) {
+  .big-font {
+    font-size: 18px;
+  }
+}
