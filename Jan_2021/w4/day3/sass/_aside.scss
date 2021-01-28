@@ -1,0 +1,18 @@
+.aside-wrapper {
+  background-color: $gray;
+  font-size: $large-size;
+  color: $black;
+  padding: $large-length;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+
+  aside {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .aside-wrapper {
+    display: none;
+  }
+}

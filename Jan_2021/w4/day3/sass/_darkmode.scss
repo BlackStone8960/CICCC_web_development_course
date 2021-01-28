@@ -1,0 +1,14 @@
+$dark-mode: false;
+
+@if $dark-mode {
+  article {
+    background-color: $black;
+    color: $white;
+  }
+} 
+@else {
+  article {
+    background-color: $white;
+    color: $black;
+  }
+}

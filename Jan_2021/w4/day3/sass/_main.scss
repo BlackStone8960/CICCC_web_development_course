@@ -1,0 +1,30 @@
+.main_left_wrapper {
+  border-right: 1px solid $black;
+  padding: 0;
+
+  section {
+    padding: $medium-length $small-length;
+    font-size: $large-size;
+    font-weight: bold;
+    background-color: $orange;
+  }
+
+  h1 {
+    font-size: $large-size;
+    background-color: $blue;
+    padding: $small-length $small-length;
+    margin: 0;
+  }
+
+  article {
+    padding: $medium-length $small-length;
+  
+    h2 {
+      font-size: $large-size;
+      margin-bottom: $small-length;
+    }
+    p {
+      font-size: $medium-size;
+    }
+  }
+}
