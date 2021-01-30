@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Links</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <header class="row">
+      <div class="col-md-4 col-5 order-md-1 order-1 logo-column">
+        <a href="index.html">
+          <span><i class="fas fa-image main-logo"></i> Photo Links</span>
+        </a>
+      </div>
+      <div class="col-md-4 col-12 order-md-2 order-5 search-column">
+        <form id="search-form" action="#" method="GET">
+          <input type="text" placeholder="Search" id="search-text">
+          <button type="submit" id="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+      <div class="col-md-2 col-2 order-md-3 order-2 log-in">
+        <a href="#">LOG IN</a>
+      </div>
+      <div class="col-1 order-3 account-icon">
+        <a href="index.html" id="account-anchor">
+          <i class="fas fa-user-circle fa-2x"></i>
+        </a>
+      </div>
+      <div class="col-md-2 col-4 order-md-4 order-4 submit-btn">
+        <a href="submit.html">SUBMIT</a>
+      </div>
+    </header>
+
+    <!-- Main part -->
+    <section class="row">
+      <div class="col-md-11 col-12">
+        <div class="main-wrapper">
+          <h1 class="main-title">PICTURE TITLE</h1>
+          <div class="slide-show">
+            <span class="img-arrow"><</span>
+            <img src="img/img-3.jpg">
+            <span class="img-arrow">></span>
+          </div>
+          <div class="below-picture">
+            <div class="account-wrapper">
+              <a href="#" class="icon-and-info">
+                <i class="fas fa-user-circle fa-2x"></i><div class="i-info">AUTHOR NAME</div>
+              </a>  
+            </div>
+            <div class="below-picture__action">
+              <a href="#" class="icon-and-info">
+                <i class="far fa-star fa-2x"></i><div class="i-info">FAVORITE</div>
+              </a>
+              <a href="#" class="icon-and-info">
+                <i class="far fa-comment fa-2x"></i><div class="i-info">COMMENT</div>
+              </a>
+            </div>
+          </div>
+          <div class="comments">
+            <h5>COMMENTS 15</h5>
+            <div class="comment-row">
+              <i class="fas fa-user-circle fa-2x"></i>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, libero dolore cumque alias nisi reiciendis commodi harum, illum aliquid maxime deserunt beatae officia hic repellat incidunt quis voluptatum fugit debitis.</p>
+            </div>
+            <div class="comment-row comment-row--reply">
+              <i class="fas fa-user-circle fa-2x"></i>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, libero dolore cumque alias nisi reiciendis commodi harum, illum aliquid maxime deserunt beatae officia hic repellat incidunt quis voluptatum fugit debitis.</p>
+            </div>
+            <div class="comment-row comment-row--reply">
+              <i class="fas fa-user-circle fa-2x"></i>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, libero dolore cumque alias nisi reiciendis commodi harum, illum aliquid maxime deserunt beatae officia hic repellat incidunt quis voluptatum fugit debitis.</p>
+            </div>
+            <div class="comment-row">
+              <i class="fas fa-user-circle fa-2x"></i>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, libero dolore cumque alias nisi reiciendis commodi harum, illum aliquid maxime deserunt beatae officia hic repellat incidunt quis voluptatum fugit debitis.</p>
+            </div>
+            <div class="comment-row comment-row--reply">
+              <i class="fas fa-user-circle fa-2x"></i>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, libero dolore cumque alias nisi reiciendis commodi harum, illum aliquid maxime deserunt beatae officia hic repellat incidunt quis voluptatum fugit debitis.</p>
+            </div>
+            <div class="comment-row">
+              <i class="fas fa-user-circle fa-2x"></i>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, libero dolore cumque alias nisi reiciendis commodi harum, illum aliquid maxime deserunt beatae officia hic repellat incidunt quis voluptatum fugit debitis.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <aside class="col-md-1 hidden-xs hidden-sm">
+        <div class="icon-box">
+          <a href="index.html">
+            <i class="fas fa-home fa-2x"></i>
+            <p>HOME</p>
+          </a>
+        </div>
+        <hr class="icon-seperation">
+        <div class="icon-box">
+          <a href="index.html">
+            <i class="fas fa-user-circle fa-2x"></i>
+            <p>ACCOUNT</p>
+          </a>
+        </div>
+        <hr class="icon-seperation">
+        <div class="icon-box">
+          <a href="index.html">
+            <i class="fas fa-poll fa-2x"></i>
+            <p>TREND</p>
+          </a>
+        </div>
+        <hr class="icon-seperation">
+        <div class="icon-box">
+          <a href="index.html">
+            <i class="fas fa-glass-cheers fa-2x"></i>
+            <p>CHAT</p>
+          </a>
+        </div>
+        <hr class="icon-seperation">
+      </aside>
+    </section>
+
+    <footer class="row">
+      <div class="col">
+        <div class="row">
+          <div class="col upper-wrapper">
+            <h2>Site Links</h2>
+            <div class="links-wrapper">
+              <div class="links-column">
+                <p>ABOUT</p>
+                <p>CONTACT</p>
+                <p>CORE MENBERSHIP</p>
+                <p>CAREERS</p>
+              </div>
+              <div class="links-column">
+                <p>DEVELOPERS</p>
+                <p>ADVERTISE</p>
+                <p>TERMS OF SERVICE</p>
+                <p>ETIQUETTE</p>
+              </div>
+              <div class="links-column">
+                <p>PRIVACY POLICY</p>
+                <p>COPYRIGHT POLICY</p>
+                <p>HELP & FAQ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row bottommost-wrapper">
+          <div class="col-6 bottommost-column logo-column-footer">
+            <a href="index.html">
+              <span><i class="fas fa-image main-logo"></i> Photo Links</span>
+            </a>
+          </div>
+          <div class="col-6 bottommost-column">
+            <div class="icon-wrapper">
+              <span>Follow Us</span>
+              <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="icon"><i class="fab fa-facebook-square"></i></a>
+              <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
