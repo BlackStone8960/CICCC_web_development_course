@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Javascript Introduction</title>
+<script>
+
+// (1) Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are 5, 6, 7.
+
+var side1 = 5;
+var side2 = 6;
+var side3 = 7;
+
+var s = (side1 + side2 + side3) / 2;
+var area =  Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+console.log(area);
+
+// (2) Write a JavaScript program to compute the sum of cubes of all integer from 1 to a given integer.
+
+// function sumCubes(number) {
+//   var sum = 0;
+//   for (i = 1; i <= number; i++) {
+//     sum += i * i * i;
+//   }
+//   return sum;
+// }
+
+// console.log(sumCubes(3));
+
+// (3) Write a JavaScript program that capitalizes all the letters in a given string.
+
+// function capitalizer(letters) {
+//   return letters.toUpperCase();
+// }
+
+// console.log(capitalizer("taichi"));
+
+// (4) Write a JavaScript program where the program takes a random integer between 1 to 10, 
+//     the user is then prompted to input a guess number. If the user input matches with guess number, 
+//     the program will display a message "Good Work" otherwise display a message "Not matched".
+
+// var randomInt = Math.floor(Math.random() * 10) + 1;
+// var inputNumber = Number(window.prompt("Input a integer from 1 to 10.", ""));
+// if (randomInt === inputNumber) {
+//   window.alert("Good Work");
+// } else {
+//   window.alert("Not matched");
+// }
+
+// console.log(randomInt, inputNumber);
+
+// (5) Write a JavaScript program to replace all the numbers with a specified number of a given array of integers.
+
+// function replaceNum(array, number) {
+//   for (i = 0; i < array.length; i++) {
+//     array[i] = number;
+//   }
+//   return array;
+// }
+
+// var array = [1, 3, 5, 7, 9];
+// var fillingNumber = 100;
+// console.log(replaceNum(array, fillingNumber))
+
+// (6) Write a JavaScript program that sorts a given array.
+
+function sortArray(array) {
+  if (Array.isArray(array)) {
+    var emptyBox = 0;
+    for (j = 0; j < array.length; j++) {
+      for (i = 0; i < array.length; i++) {
+        if (Number.isFinite(array[i])) {
+          if (array[i] > array[i + 1]) {
+            emptyBox = array[i + 1];
+            array[i + 1] = array[i];
+            array[i] = emptyBox;
+          }
+        } else {
+          console.log('Use only the number in this array');
+          return;
+        }
+      }
+    }
+    return array;
+  } else {
+    console.log('Input an array');
+  }
+}
+
+// var array = [123, 32, -6, 3, 5, 4, 12220, 2, 1];
+// console.log(sortArray(array));
+
+// (7) Write a JavaScript program that reverses a given array
+
+// function reverseArray(array) {
+//   var emptyBox = 0;
+//   for (i = 0; i < Math.floor(array.length / 2); i++) {
+//     swappedIndex = array.length - (i + 1); // The element associated with this index will be replaced with array[i]
+//     emptyBox = array[i];
+//     array[i] = array[swappedIndex];
+//     array[swappedIndex] = emptyBox;
+//   }
+//   return array;
+// }
+
+// var array = [1, 2, 3, 4, 5, 6, 7];
+// console.log(reverseArray(array));
+
+// (8) Create an array “customer” objects. Each customer object should have at least 3 fields: “name”, “email”, “order”.
+//     Create at least 3 such objects.
+
+// var customer = [{
+//   name: "Taichi",
+//   email: "taichi@xmail.com",
+//   order: 40,
+//   age: 28
+// }, {
+//   name: "Spider Man",
+//   email: "spider@xmail.com",
+//   order: 100,
+//   age: 23
+// }, {
+//   name: "Shrek",
+//   email: "shrek@xmail.com",
+//   order: 10,
+//   age: 10
+// }, {
+//   name: "Son Gokou",
+//   email: "Kamehameha@xmail.com",
+//   order: 1,
+//   age: 23
+// }]
+
+// console.log(customer);
+
+// (9) Filter the customers array to show the customer with the most expensive order.
+
+// var orderArray = customer.map(function(value) {
+//   return value.order;
+// })
+// var expensiveOrder = sortArray(orderArray)[0]; // The function in 6th question.
+// var highPriorityCustomer = customer.filter(function(value) {
+//   return value.order === expensiveOrder;
+// })
+
+// console.log(highPriorityCustomer);
+
+</script>
+</head>
+<body>
+</body>
+</html>
