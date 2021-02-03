@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript - Manupulating DOM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="meal-table"></div>
+  <form action="#" id="obj-form">
+    <label for="name">Name</label><input type="text" name="name">
+    <label for="price">Price</label><input type="text" name="price">
+    <label for="popularity">Popularity</label><input type="text" name="popularity">
+    <label for="bland">Bland</label><input type="text" name="bland">
+    <input type="submit" value="Submit">
+  </form>
+</body>
+<script>
+// (1) Create an array of ‘meal’ objects, where each meal object consists of “name”, “prince” and “popularity” fields. 
+//     Your array should of size 3 at least.
+
+var meal = [{
+  Name: "Hamburger",
+  Price: 5,
+  Popularity: "high",
+  Bland: "Mc.Donald"
+}, {
+  Name: "Rice",
+  Price: 40,
+  Popularity: "low",
+  Bland: "Akitakomachi"
+}, {
+  Name: "Tomato",
+  Price: 1,
+  Popularity: "middle",
+  Bland: "Mr.Tomato"
+}, {
+  Name: "Noodle",
+  Price: 2,
+  Popularity: "high",
+  Bland: "Nissin"
+}]
+
+// (2) Using JavaScript, dynamically create a HTML table to display the contents of your array 
+
+var playGround = document.getElementById('meal-table');
+var mealTable = document.createElement('table');
+var tableTemp = playGround.appendChild(mealTable);
+var mealKeys = Object.keys(meal[0]);
+var mealTh = "";
+var mealTd = [];
+var htmlArray = [];
+
+// Make table header first
+for(value of mealKeys) {
+  mealTh += `<th>${value}</th>`;
+}
+htmlArray.push(mealTh);
+
+// Make table datum
+for(i = 0; i < meal.length; i++) {
+  mealTd[i] = "";
+  for(j = 0; j < mealKeys.length; j++) {
+    mealTd[i] += `<td>${meal[i][mealKeys[j]]}</td>`;
+  }
+  htmlArray.push(mealTd[i]);
+}
+
+// Render contents of meal object
+for(k = 0; k <= meal.length; k++) {
+  tableTemp.insertAdjacentHTML('beforeend', `<tr>${htmlArray[k]}</tr>`);
+}
+
+// (3) Using CSS, give some styling to your table.
+
+// (4) Using JavaScript event listeners, add a hover effect to your table where the line background color changes with mouse over.
+
+var tr = document.getElementById('meal-table').querySelectorAll('tr');
+tr.forEach((element) => {
+  element.addEventListener('mouseover', () => {
+    element.style.backgroundColor = "red";
+    element.style.color = "white";
+  });
+  element.addEventListener('mouseout', () => {
+    element.style.backgroundColor = "white";
+    element.style.color = "black";
+  })
+})
+
+// (5) Using JavaScript, create a form where a user can enter a new meal object to the array.
+// (6) When a user submits a new meal, trigger an alert box to show the user what she has entered.
+
+var objectForm = document.getElementById('obj-form');
+objectForm.onsubmit = (event) => {
+  event.preventDefault();
+  var name = objectForm.name.value;
+  var price = objectForm.price.value;
+  var popularity = objectForm.popularity.value;
+  var bland = objectForm.bland.value;
+  var newObject = {
+    Name: name,
+    Price: price,
+    Popularity: popularity,
+    Bland: bland
+  };
+  meal.push(newObject);
+  alert(
+    `Name: ${name}, Price: ${price}, Popularity: ${popularity}, Bland: ${bland}`
+  );
+  objectForm.reset();
+  console.log(meal);
+}
+
+</script>
+</html>
