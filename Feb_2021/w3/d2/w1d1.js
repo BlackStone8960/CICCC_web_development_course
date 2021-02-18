@@ -58,16 +58,12 @@ function basicOp(operation, value1, value2) {
   switch(operation) {
      case '+':
       return value1 + value2;
-      break;
     case '-':
       return value1 - value2;
-      break;
     case '*':
       return value1 * value2;
-      break;
     case '/':
       return value1 / value2;
-      break;
     default:
       return 'Input +, -, *, / as a first argument'
   }
@@ -79,7 +75,7 @@ const resultMultiply = basicOp('*', 2, 5);
 const resultDevide = basicOp('/', 4, 2);
 const resultAll = [resultPlus, resultMinus, resultMultiply, resultDevide];
 
-// console.log(resultAll);
+console.log(resultAll);
 
 // 3.
 // The starship Enterprise has run into some problem when creating a program to greet everyone as they come aboard. 
@@ -90,7 +86,7 @@ function sayHello(name) {
   return `Hello, ${name}`;
 }
 
-console.log(sayHello('Mr. Spock'));
+// console.log(sayHello('Mr. Spock'));
 
 // 4. Your task is to sum the differences between consecutive pairs in the array in descending order.
 // For example: sumOfDifferences([2, 1, 10]) Returns 9
@@ -119,4 +115,4 @@ function sumOfDifferences(arr) {
   }
 }
 
-console.log(sumOfDifferences([1, 2, -10]));
+// console.log(sumOfDifferences([1, 2, -10]));
