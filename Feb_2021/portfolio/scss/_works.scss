@@ -1,0 +1,58 @@
+#works {
+  // top: 200vh;
+  // left: 0;
+
+  .section__inner {
+    .capture-wrapper {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      a {
+        display: block;
+        width: 19.8%;
+        height: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .site-description {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      font-family: "Century Gothic";
+
+      img {
+        width: 50%;
+      }
+
+      &__text {
+        padding-left: 20px;
+
+        .description-title {
+          font-size: 26px;
+          font-weight: normal;
+          margin-bottom: 16px;
+        }
+        .description-sentence {
+          margin-bottom: 22px;
+          font-size: 22px;
+        }
+        .whatiused {
+          font-size: 22px;
+        }
+        .used-skill {
+          font-style: normal;
+          color: $green;
+          font-weight: bold;
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}

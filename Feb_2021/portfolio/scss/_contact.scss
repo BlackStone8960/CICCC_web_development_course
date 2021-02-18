@@ -1,0 +1,53 @@
+#contact {
+  // top: 300vh;
+  // left: 0;
+
+  .contact-wrapper {
+    width: 100%;
+
+    .contact-form {
+      width: 100%;
+      font-size: 20px;
+
+      input, textarea {
+        font-family: "Century Gothic";
+        height: 1.7em;
+        font-size: 21px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        border: none;
+      }
+
+      &:focus {
+        border: 2px solid $green;
+      }
+
+      .name-email {
+        display: flex;
+        justify-content: space-between;
+
+        input {
+          width: 47%;
+        }
+      }
+
+      textarea {
+        height: auto;
+      }
+      #send {
+        background-color: $green;
+        width: 20%;
+        margin: 2px auto 0;
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        border-radius: 25px;
+
+        &:hover {
+          background-color: lighten($green, 30%);
+        }
+      }
+    }
+  }
+}

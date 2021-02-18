@@ -1,0 +1,64 @@
+#skills {
+  // top: 100vh;
+  // left: 0;
+
+  .section__inner {
+    .skills-wrapper {
+      width: 100%;
+
+      .skill-blocks {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-family: "Century Gothic";
+  
+        .skill-block {
+          width: 49%;
+          background-color: #fff;
+          border: 3px solid $green;
+          border-radius: 12px;
+          text-align: center;
+          box-sizing: border-box;
+          margin-bottom: 16px;
+
+          &--last {
+            width: 100%;
+            margin-bottom: 0;
+          }
+  
+          &__title {
+            font-weight: bold;
+            color: $green;
+            font-size: 22px;
+            margin: 10px 0;
+          }
+  
+          &__icons {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: center;
+  
+            h4 {
+              font-weight: bold;
+              color: $black;
+              font-size: 16px;
+            }
+          }
+          &__icon {
+            text-align: center;
+            margin: 0 3px 12px;
+  
+            i {
+              font-size: 78px;
+            }
+
+            .icon-svg {
+              width: 67px;
+            }
+          }
+        }
+      }  
+    }
+  }
+}

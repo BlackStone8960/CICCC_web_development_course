@@ -1,0 +1,534 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+}
+
+.section-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+.section-wrapper .section {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: #171717;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  overflow: hidden;
+}
+
+.section-wrapper .section .hidden {
+  display: none;
+}
+
+.section-wrapper .section .visible {
+  display: block;
+}
+
+.section-wrapper .section .top-title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #fff;
+  font-family: "mistral";
+  font-size: 85px;
+  -webkit-transform: rotate(-17deg);
+          transform: rotate(-17deg);
+}
+
+.section-wrapper .section__inner {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-wrapper .section .sns-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.section-wrapper .section .sns-wrapper .sns-icon-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.section-wrapper .section .sns-wrapper .sns-icon-list .sns-icon {
+  width: 64px;
+  height: 64px;
+}
+
+.section-wrapper .section .sns-wrapper .sns-icon-list .sns-icon a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.section-wrapper .section .sns-wrapper .sns-icon-list .sns-icon a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 48px;
+}
+
+.center {
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 100;
+}
+
+.right {
+  top: 0;
+  left: 100vw;
+  display: block;
+  z-index: 10;
+}
+
+.left {
+  top: 0;
+  left: -100vw;
+  display: block;
+  z-index: 10;
+}
+
+.bottom {
+  top: 100vh;
+  left: 0;
+  display: block;
+  z-index: 10;
+}
+
+.top {
+  top: -100vh;
+  left: 0;
+  display: block;
+  z-index: 10;
+}
+
+.space {
+  top: -300vh;
+  right: 0;
+  display: none;
+  z-index: 1;
+}
+
+.page-control {
+  color: #fff;
+}
+
+.page-control .side-arrow {
+  position: absolute;
+  width: 5%;
+  height: 50%;
+  top: 25%;
+  cursor: pointer;
+}
+
+.page-control .arrow-box {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+.page-control .arrow-box:before, .page-control .arrow-box:after {
+  content: "";
+  height: 100%;
+  width: 2px;
+  display: block;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+  background-color: #00CC6A;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+}
+
+.page-control .arrow-box:after {
+  top: 50%;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+}
+
+.page-control .arrow-box > span {
+  position: absolute;
+  right: 50%;
+  top: 157%;
+  font-family: "Century Gothic";
+  font-size: 24px;
+}
+
+.page-control .arrow-box--bottom {
+  top: auto;
+  bottom: 10px;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
+
+.page-control .arrow-box--bottom:before {
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+
+.page-control .arrow-box--bottom:after {
+  -webkit-transform: rotate(120deg);
+          transform: rotate(120deg);
+}
+
+.page-control .arrow-box--bottom > span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  right: auto;
+  -webkit-transform: translate(-50%, 0px);
+          transform: translate(-50%, 0px);
+}
+
+.page-control .arrow-box--top {
+  bottom: auto;
+  top: 10px;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
+
+.page-control .arrow-box--top:before {
+  -webkit-transform: rotate(120deg) !important;
+          transform: rotate(120deg) !important;
+}
+
+.page-control .arrow-box--top:after {
+  -webkit-transform: rotate(60deg) !important;
+          transform: rotate(60deg) !important;
+}
+
+.page-control .arrow-box--top > span {
+  position: absolute;
+  left: 50% !important;
+  top: 100% !important;
+  bottom: auto !important;
+  -webkit-transform: translate(-50%, 0px) !important;
+          transform: translate(-50%, 0px) !important;
+}
+
+.page-control .right-arrow {
+  right: 0;
+}
+
+.page-control .left-arrow {
+  left: 0;
+}
+
+.page-control .left-arrow .arrow-box:before, .page-control .left-arrow .arrow-box:after {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.page-control .left-arrow .arrow-box:after {
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.page-control .left-arrow .arrow-box > span {
+  right: auto;
+  left: 100%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.page-control .top-arrow {
+  top: 0;
+}
+
+.page-control .top-arrow .arrow-box:before, .page-control .top-arrow .arrow-box:after {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.page-control .top-arrow .arrow-box:after {
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.page-control .top-arrow .arrow-box > span {
+  right: auto;
+  left: 100%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.page-control .top-bottom-arrow {
+  position: absolute;
+  left: 35%;
+  height: 80px;
+  width: 30%;
+  cursor: pointer;
+}
+
+.page-control .bottom-arrow {
+  bottom: 0;
+}
+
+.page-control .top-arrow {
+  top: 0;
+}
+
+#about .section__introduction {
+  padding: 0 2%;
+  color: #fff;
+}
+
+#about .section__introduction h2 {
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-family: "Century Gothic";
+}
+
+#about .section__introduction p {
+  font-size: 24px;
+  font-family: "Century Gothic";
+}
+
+#skills .section__inner .skills-wrapper {
+  width: 100%;
+}
+
+#skills .section__inner .skills-wrapper .skill-blocks {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Century Gothic";
+}
+
+#skills .section__inner .skills-wrapper .skill-blocks .skill-block {
+  width: 49%;
+  background-color: #fff;
+  border: 3px solid #00CC6A;
+  border-radius: 12px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+#skills .section__inner .skills-wrapper .skill-blocks .skill-block--last {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+#skills .section__inner .skills-wrapper .skill-blocks .skill-block__title {
+  font-weight: bold;
+  color: #00CC6A;
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+#skills .section__inner .skills-wrapper .skill-blocks .skill-block__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#skills .section__inner .skills-wrapper .skill-blocks .skill-block__icons h4 {
+  font-weight: bold;
+  color: #171717;
+  font-size: 16px;
+}
+
+#skills .section__inner .skills-wrapper .skill-blocks .skill-block__icon {
+  text-align: center;
+  margin: 0 3px 12px;
+}
+
+#skills .section__inner .skills-wrapper .skill-blocks .skill-block__icon i {
+  font-size: 78px;
+}
+
+#skills .section__inner .skills-wrapper .skill-blocks .skill-block__icon .icon-svg {
+  width: 67px;
+}
+
+#works .section__inner .capture-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#works .section__inner .capture-wrapper a {
+  display: block;
+  width: 19.8%;
+  height: 100%;
+}
+
+#works .section__inner .capture-wrapper a img {
+  width: 100%;
+}
+
+#works .section__inner .site-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-family: "Century Gothic";
+}
+
+#works .section__inner .site-description img {
+  width: 50%;
+}
+
+#works .section__inner .site-description__text {
+  padding-left: 20px;
+}
+
+#works .section__inner .site-description__text .description-title {
+  font-size: 26px;
+  font-weight: normal;
+  margin-bottom: 16px;
+}
+
+#works .section__inner .site-description__text .description-sentence {
+  margin-bottom: 22px;
+  font-size: 22px;
+}
+
+#works .section__inner .site-description__text .whatiused {
+  font-size: 22px;
+}
+
+#works .section__inner .site-description__text .used-skill {
+  font-style: normal;
+  color: #00CC6A;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+#contact .contact-wrapper {
+  width: 100%;
+}
+
+#contact .contact-wrapper .contact-form {
+  width: 100%;
+  font-size: 20px;
+}
+
+#contact .contact-wrapper .contact-form input, #contact .contact-wrapper .contact-form textarea {
+  font-family: "Century Gothic";
+  height: 1.7em;
+  font-size: 21px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 10px;
+  border: none;
+}
+
+#contact .contact-wrapper .contact-form:focus {
+  border: 2px solid #00CC6A;
+}
+
+#contact .contact-wrapper .contact-form .name-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#contact .contact-wrapper .contact-form .name-email input {
+  width: 47%;
+}
+
+#contact .contact-wrapper .contact-form textarea {
+  height: auto;
+}
+
+#contact .contact-wrapper .contact-form #send {
+  background-color: #00CC6A;
+  width: 20%;
+  margin: 2px auto 0;
+  display: block;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 25px;
+}
+
+#contact .contact-wrapper .contact-form #send:hover {
+  background-color: #66ffb6;
+}
+/*# sourceMappingURL=style.css.map */
