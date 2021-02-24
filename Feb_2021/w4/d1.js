@@ -8,9 +8,7 @@
 // and calculates the total resistance of the circuit in ohms. 
 // The ohm is the standard unit of electrical resistance in the International System of Units ( SI ).
 
-const totalResistance = (resistances) => {
-  return resistances.reduce((r1, r2) => r1 + r2);
-};
+const totalResistance = (resistances) => resistances.reduce((r1, r2) => r1 + r2);
 
 const resistances = [1, 3, 5, 8, 10];
 // console.log(`The total resistance of the circuit is ${totalResistance(resistances)} orms.`);
@@ -28,8 +26,7 @@ const halve = (number) => {
     const array = [];
     const leftMost = (number - number % 2) / 2;
     const rightMost = leftMost + number % 2;
-    array.push(leftMost);
-    array.push(rightMost);
+    array.push(leftMost, rightMost);
     array.sort((a, b) => a - b);
 
     return array;  
@@ -124,4 +121,4 @@ const sortAndSet = (array) => {
 
 const array5 = [3, 3, 3, 2, 1]; 
 
-console.log(sortAndSet(array5));
+// console.log(sortAndSet(array5));
