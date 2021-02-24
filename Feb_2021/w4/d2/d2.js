@@ -79,13 +79,11 @@ const object = {
 // clone([1, 2, 3]) ➞ [1, 2, 3, [1, 2, 3]]
 // clone(["x", "y"]) ➞ ["x", "y", ["x", "y"]]
 
-const clone = (arr) => {
-  return [...arr, arr]
-};
+const clone = (arr) => [...arr, arr];
 
 const array4 = ["x", "y"];
 
-// console.log(clone(array4));
+console.log(clone(array4));
 
 // 5)  Create a function that takes an array of items, 
 // removes all duplicate items and returns a new array in the same sequential order as the old array (minus duplicates).
