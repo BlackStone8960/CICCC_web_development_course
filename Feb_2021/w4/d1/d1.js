@@ -116,9 +116,10 @@ const array4 = [2, -1, 4, 8, 10];
 
 const sortAndSet = (array) => {
   array.sort((a, b) => a - b);
-  return new Set(array);
+  const set = new Set(array);
+  return Array.from(set);
 };
 
 const array5 = [3, 3, 3, 2, 1]; 
 
-// console.log(sortAndSet(array5));
+console.log(sortAndSet(array5));
