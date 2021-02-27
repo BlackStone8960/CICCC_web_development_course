@@ -1,0 +1,31 @@
+body {
+  background-color: $bage;
+}
+#generate-button {
+  @extend %button;
+  font-size: 24px;
+}
+.quote-box {
+  @extend %box;
+}
+
+.float-quote {
+  width: 100%;
+  margin: 20px 0;
+  #double-quote {
+    float: left;
+    width: 100px;
+  }
+  .quote-sentence {
+    font-size: 24px;
+  }
+}
+.author-box {
+  clear: left;
+  text-align: right;
+  #author {
+    font-style: italic;
+    font-size: 24px;
+    color: $bage;
+  }
+}

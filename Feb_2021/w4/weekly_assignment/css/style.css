@@ -1,0 +1,105 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+}
+
+#generate-button, .quote-creator-wrapper #quote-form #submit-quote {
+  display: block;
+  margin: 0 auto 30px;
+  background-color: #025955;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-align: center;
+  -webkit-box-shadow: 0 7px #000e0e;
+          box-shadow: 0 7px #000e0e;
+}
+
+#generate-button:active, .quote-creator-wrapper #quote-form #submit-quote:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  position: relative;
+  top: 7px;
+}
+
+.quote-box, .quote-creator-wrapper {
+  width: 600px;
+  margin: 20px auto;
+  background-color: #00917c;
+  color: #fff;
+  padding: 20px;
+}
+
+body {
+  background-color: #fde8cd;
+}
+
+#generate-button {
+  font-size: 24px;
+}
+
+.float-quote {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.float-quote #double-quote {
+  float: left;
+  width: 100px;
+}
+
+.float-quote .quote-sentence {
+  font-size: 24px;
+}
+
+.author-box {
+  clear: left;
+  text-align: right;
+}
+
+.author-box #author {
+  font-style: italic;
+  font-size: 24px;
+  color: #fde8cd;
+}
+
+.quote-creator-wrapper #quote-form {
+  width: 100%;
+  text-align: center;
+}
+
+.quote-creator-wrapper #quote-form label, .quote-creator-wrapper #quote-form textarea, .quote-creator-wrapper #quote-form input {
+  display: block;
+  width: 100%;
+}
+
+.quote-creator-wrapper #quote-form label {
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+.quote-creator-wrapper #quote-form #author-text {
+  height: 1.5rem;
+}
+
+.quote-creator-wrapper #quote-form #submit-quote {
+  font-size: 24px;
+  width: 50%;
+  border: none;
+  margin: 20px auto !important;
+}
+/*# sourceMappingURL=style.css.map */

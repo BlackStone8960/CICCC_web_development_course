@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's make quotes</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="quote-box">
+    <div id="generate-button">Generate Quote</div>
+    <div class="float-quote">
+      <img src="img/double-quotation.png" alt="double-quotation" id="double-quote"
+      width="100px">
+      <span class="quote-sentence" id="quote-sentence">Push me</span>
+    </div>
+    <div class="author-box">
+      <span id="author">Top button</span>
+    </div>
+  </div>
+  <div class="quote-creator-wrapper">
+    <form action="#" id="quote-form">
+      <label for="quote">Add your own quote</label>
+      <textarea name="quote" id="quote" cols="60" rows="15" required></textarea>
+      <label for="author">Author</label>
+      <input type="text" name="author" id="author-text" required>
+      <input type="submit" value="Submit" id="submit-quote">
+    </form>
+  </div>
+  <script src="quoteAndAuthor.js"></script>
+</body>
+</html>

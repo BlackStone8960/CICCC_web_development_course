@@ -1,0 +1,28 @@
+.quote-creator-wrapper {
+  @extend %box;
+  #quote-form {
+    width: 100%;
+    text-align: center;
+
+    label, textarea, input {
+      display: block;
+      width: 100%;
+    }
+
+    label {
+      margin: 5px 0;
+      font-size: 20px;
+    }
+
+    #author-text {
+      height: 1.5rem;
+    }
+    #submit-quote {
+      @extend %button;
+      font-size: 24px;
+      width: 50%;
+      border: none;
+      margin: 20px auto !important;
+    }
+  }
+}
