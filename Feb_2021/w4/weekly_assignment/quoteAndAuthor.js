@@ -43,11 +43,10 @@ quoteForm.addEventListener('submit', (e) => {
   };
 
   if(findDuplicate(quoteObject).length) {
-    alert('Duplicated quote exists. Input other quotes.')
+    alert('Duplicated quote exists. Input other quotes.');
   } else {
     quoteAndAuthor.push(quoteObject);
-    quoteForm.quote.value = "";
-    quoteForm.author.value = "";
+    quoteForm.reset();
     alert('Your quote submitted successfully!');
   }
 });
