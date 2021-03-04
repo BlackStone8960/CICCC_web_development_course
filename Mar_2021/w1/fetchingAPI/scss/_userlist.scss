@@ -1,0 +1,21 @@
+.list-wrapper {
+  width: 650px;
+  margin: 30px auto;
+  #form {
+    margin-bottom: 20px;
+    text-align: center;
+
+    #idFilter {
+      height: 1.6rem;
+    }  
+  }
+}
+
+.user-info {
+  border: 1px solid #666;
+  border-top: none;
+  padding: 10px 40px;
+  &:first-child {
+    border-top: 1px solid #666;
+  }
+}
