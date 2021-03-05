@@ -100,4 +100,8 @@ a {
 #loadingImg img {
   width: 100px;
 }
+
+.hide {
+  display: none !important;
+}
 /*# sourceMappingURL=style.css.map */
