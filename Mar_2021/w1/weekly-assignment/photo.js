@@ -4,7 +4,7 @@ const photoList = document.getElementById('photolist');
 const loadingImg = document.getElementById('loadingImg');
 const selectElement = document.getElementById('loadNum');
 let loadNum = selectElement.value; // The number of elements which will be loaded when "See More" button clicked
-let dataLength, loadedItemLength;
+let dataLength;
 
 // Function to output json formatted information to HTML
 const renderJSON = (json, times, currentPosition) => {
@@ -34,7 +34,7 @@ const fetchAPI = () => {
   })
   .then((data) => { // success
     dataLength = data.length;
-    loadedItemLength = photoList.getElementsByClassName('loaded').length;
+    const loadedItemLength = photoList.getElementsByClassName('loaded').length;
     const restLength = dataLength - loadedItemLength;
 
     if(dataLength !== loadedItemLength) { // If datum to load remain
