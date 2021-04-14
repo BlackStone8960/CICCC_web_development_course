@@ -1,0 +1,17 @@
+#photolist {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+  align-items: center;
+
+  .loaded {
+    margin: 0 6px 18px;
+    width: 150px;
+    height: 300px;
+    padding: 8px;
+    border: 1px solid #666;
+  }
+  span {
+    display: inline-block;
+  }
+}
