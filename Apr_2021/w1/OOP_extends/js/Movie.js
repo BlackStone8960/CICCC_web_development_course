@@ -1,11 +1,10 @@
 import Media from './Media.js';
 
 export default class Movie extends Media {
-  constructor(mediaInfo, director, runtime, catalog) {
+  constructor(mediaInfo, director, runtime) {
     super(mediaInfo);
     this._director = director;
     this._runtime = runtime;
-    catalog.add(this);
   }
   get director() {
     if(typeof this._director === "string") {

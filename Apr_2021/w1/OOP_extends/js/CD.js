@@ -1,12 +1,10 @@
 import Media from './Media.js';
-import Catalog from './Catalog.js';
 
 export default class CD extends Media {
-  constructor(mediaInfo, artist, songs = [], catalog) {
+  constructor(mediaInfo, artist, songs = []) {
     super(mediaInfo);
     this._artist = artist;
     this._songs = songs;
-    catalog.add(this);
   }
   get artist() {
     if(typeof this._artist === "string") {

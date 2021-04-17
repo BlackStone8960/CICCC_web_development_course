@@ -1,11 +1,10 @@
 import Media from './Media.js';
 
 export default class Book extends Media {
-  constructor(mediaInfo, author, pages, catalog) {
+  constructor(mediaInfo, author, pages) {
     super(mediaInfo);
     this._author = author;
     this._pages = pages;
-    catalog.add(this);
   }
   get author() {
     if (typeof this._author === "string") {

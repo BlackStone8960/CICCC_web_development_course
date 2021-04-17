@@ -32,14 +32,14 @@ export default class Media {
       return "No ratings detected.";
     }
   }
-  toggleCheckOutStatus(catalog) {
+  toggleCheckOutStatus() {
     this._isCheckedOut = !(this._isCheckedOut);
   }
   getAverageRating() {
     const sum = this._ratings.reduce((a, b) => a + b)
     return (sum / this._ratings.length);
   }
-  addRating(newRate, catalog) {
+  addRating(newRate) {
     if (newRate >= 1 && newRate <= 5) {
       this._ratings.push(newRate);
     } else {

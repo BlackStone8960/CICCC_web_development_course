@@ -5,15 +5,15 @@ import Movie from './Movie.js';
 
 const catalog = new Catalog();
 
-const historyOfEverything = new Book({ title: 'A Short History of Nearly Everything' }, 'Bill Bryson', 544, catalog);
-historyOfEverything.toggleCheckOutStatus(catalog);
+const historyOfEverything = new Book({ title: 'A Short History of Nearly Everything' }, 'Bill Bryson', 544);
+historyOfEverything.toggleCheckOutStatus();
 historyOfEverything.addRating(4);
 historyOfEverything.addRating(5);
 historyOfEverything.addRating(5);
 console.log(historyOfEverything.getAverageRating());
 
-const speed = new Movie({ title: "Speed" }, 'Jan de Bont', 116, catalog);
-speed.toggleCheckOutStatus(catalog);
+const speed = new Movie({ title: "Speed" }, 'Jan de Bont', 116);
+speed.toggleCheckOutStatus();
 console.log(speed.isCheckedOut);
 speed.addRating(1);
 speed.addRating(1);
@@ -36,10 +36,9 @@ const masterPiece = new CD({
   "You're Crazy",
   "Anything Goes",
   "Rocket Queen"
-],
-catalog 
-);
-masterPiece.toggleCheckOutStatus(catalog);
+]);
+
+masterPiece.toggleCheckOutStatus();
 console.log(masterPiece.isCheckedOut);
 masterPiece.addRating(5);
 masterPiece.addRating(5);
@@ -47,4 +46,5 @@ masterPiece.addRating(4.5);
 console.log(masterPiece.getAverageRating());
 console.log(masterPiece.title, masterPiece.songs, masterPiece.shuffle());
 
+catalog.add([historyOfEverything, speed, masterPiece]);
 console.log(catalog.items);
