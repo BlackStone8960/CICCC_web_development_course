@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VANCOUVER CINEMA</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</head>
-<body>
-  <div class="seat-container">
-    <div class="seat-description">
-      <div class="seat-dummy"></div><span>N/A</span>
-      <div class="seat-dummy active"></div><span>Selected</span>
-      <div class="seat-dummy reserved"></div><span>Occupied</span>
-    </div>
+import React from 'react';
+
+const Seat = () => {
+  return (
     <div class="seat-wrapper">
       <div class="seat reserved" onclick="seatActive(this)"></div>
       <div class="seat" onclick="seatActive(this)"></div>
@@ -113,11 +100,7 @@
       <div class="seat" onclick="seatActive(this)"></div>
       <div class="seat reserved" onclick="seatActive(this)"></div>
     </div>
-    <div class="sum-text">
-      <div><span id="seats-num"></span>Seats : </div>
-      <div>$<span id="total"></span></div>
-    </div>
-  </div>
-  <script src="seat.js"></script>
-</body>
-</html>
+  )
+};
+
+export { Seat as default };

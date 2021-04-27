@@ -2,6 +2,16 @@ let activeSeats = 0;
 let admissionFee = 15;
 const seatEl = document.getElementsByClassName('seat');
 
+const fetchAPI = async () => {
+  try {
+    const movieData = await axios.get("https://api.themoviedb.org/3/movie/550?api_key=62157c10c2f3f945ca640aea2fc9b617");
+    console.log(movieData);
+  }
+  catch(e) {
+    console.log(`Error detected. ${e}`);
+  }
+};
+
 const renderTotal = (userSelection) => {
   document.getElementById('seats-num').innerText = userSelection ? userSelection.activeSeats : 0;
   document.getElementById('total').innerText = userSelection ? userSelection.activeSeats * userSelection.admissionFee : 0;
@@ -47,6 +57,7 @@ const renderSeatsStatus = (seatsStatus) => {
 };
 
 window.addEventListener('load', () => {
+  fetchAPI();
   const userSelection = JSON.parse(localStorage.getItem('userSelection'));
   // take datum from localstorage
   renderTotal(userSelection);
