@@ -1,7 +1,7 @@
 import React from 'react';
-import Seat from './Seat';
+import Seats from './Seats';
 
-const Book = () => {
+const BookingSeat = () => {
   return (
     <div className="seat-container">
       <div className="seat-description">
@@ -9,9 +9,9 @@ const Book = () => {
         <div className="seat-dummy active"></div><span>Selected</span>
         <div className="seat-dummy reserved"></div><span>Occupied</span>
       </div>
-      <Seat />
+      <Seats />
     </div>
   );
 };
 
-export { Book as default };
+export { BookingSeat as default };

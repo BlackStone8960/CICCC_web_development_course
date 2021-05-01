@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react';
 
-const Seat = () => {
+const Seats = () => {
   const [seats, setSeats] = useState([
     -1, 0, 0, -1, 0, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1,
     -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, 0, -1, -1,
     -1, 0, -1, -1, -1, -1, -1, 0, -1, -1, 0, -1, -1, -1, 0, -1, -1, -1,
     -1, 0, 0, -1, 0, -1, -1, -1, -1, -1
-  ]);
+  ]); // Reducerをつかったほうがいい？いいかもしれないが、SQLを使ってサーバに情報を保存したりする可能性があるのでいったん後回しでホームページなどのUIを作っていく
   const [activeSeats, setActiveSeats] = useState(0);
   const [admissionFee, setAdmissionFee] = useState(15);
 
@@ -62,4 +62,4 @@ const Seat = () => {
   )
 };
 
-export { Seat as default };
+export { Seats as default };

@@ -1,4 +1,4 @@
-const booksReducer = (state, action) => {
+const moviesReducer = (state, action) => {
   switch(action.type) {
     case 'POPULATE_BOOKS' :
       return action.books;
@@ -7,4 +7,4 @@ const booksReducer = (state, action) => {
   }
 };
 
-export { booksReducer as default };
+export { moviesReducer as default };

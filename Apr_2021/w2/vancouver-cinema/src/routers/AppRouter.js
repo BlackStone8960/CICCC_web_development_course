@@ -1,8 +1,8 @@
 import React from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
-import MovieList from "../components/MovieList";
-import Book from "../components/Book";
+import HomePage from "../components/HomePage";
+import BookingSeat from "../components/BookingSeat";
 
 export const history = createHistory();
 
@@ -10,8 +10,8 @@ const AppRouter = () => (
   <Router history={history}>
     <div>
       <Switch>
-        <Route path='/' component={MovieList} exact={true} />
-        <Route path='/book' component={Book} />
+        <Route path='/' component={HomePage} exact={true} />
+        <Route path='/booking' component={BookingSeat} />
       </Switch>
     </div>
   </Router>
