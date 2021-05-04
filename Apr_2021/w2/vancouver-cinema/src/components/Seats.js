@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 const Seats = () => {
+  // const [movies, dispatch] = useReducer(moviesReducer, {});
   const [seats, setSeats] = useState([
     -1, 0, 0, -1, 0, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1,
     -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, 0, -1, -1,
