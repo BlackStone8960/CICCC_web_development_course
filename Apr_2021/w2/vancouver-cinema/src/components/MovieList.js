@@ -3,13 +3,13 @@ import APIContext from '../context/API-context';
 import Movie from "./Movie";
 
 const MovieList = () => {
-  const { APIData } = useContext(APIContext);
+  const { movies } = useContext(APIContext);
 
   return (
-    <div>
+    <div className="movielist-wrapper">
       {
-        APIData.results && APIData.results.map((movie) => (
-          <Movie key={movie.original_title} movie={movie} APIData={APIData}/>
+        Array.isArray(movies) && movies.map((movie) => (
+          <Movie key={movie.original_title} movie={movie} movies={movies}/>
         ))
       }
     </div>

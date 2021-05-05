@@ -1,2 +1,9 @@
-@import 'reset';
+@import 'config/color';
+@import 'config/reset';
+@import 'common';
 @import 'seat';
+@import 'header';
+@import 'detail';
+@import 'movie';
+@import 'movieList';
+@import 'genre';
