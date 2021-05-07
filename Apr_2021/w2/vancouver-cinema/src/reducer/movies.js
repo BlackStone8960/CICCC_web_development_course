@@ -1,7 +1,7 @@
-const moviesReducer = (state, action) => {
+const moviesReducer = (state = [], action) => {
   switch(action.type) {
-    case 'POPULATE_BOOKS' :
-      return action.books;
+    case 'POPULATE_MOVIES' :
+      return action.movies;
     default :
       return state;
   }

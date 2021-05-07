@@ -1,7 +1,14 @@
 import React, {useState, useEffect} from 'react';
+import { connect } from 'react-redux';
+// import { startSetReservation } from '../actions/'
 
-const Seats = () => {
-  // const [movies, dispatch] = useReducer(moviesReducer, {});
+// first, set every movies reservation data -> done
+// second, find movie data from redux by movieName (if couldn't find it, use initial value in useState().)
+// render it
+// Make CONFIRM button to send reservation information to localstorage and redux
+// onSubmit CONFIRM button, dispatch updateReservation() and update information inside redux and localStorage.
+
+export const Seats = (props) => {
   const [seats, setSeats] = useState([
     -1, 0, 0, -1, 0, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1,
     -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, 0, -1, -1,
@@ -12,6 +19,7 @@ const Seats = () => {
   const [admissionFee, setAdmissionFee] = useState(15);
 
   useEffect(() => {
+    
     const seatsObj = JSON.parse(localStorage.getItem('seats'));
     if (seatsObj) {
       setSeats(seatsObj.seats);
@@ -46,7 +54,7 @@ const Seats = () => {
   }
 
   return (
-    <>
+    <div className="seat-container">
       <div className="seat-wrapper">
         {seats.map((seat, index) => (
           <div
@@ -59,8 +67,16 @@ const Seats = () => {
       <div className="sum-text">
         <div>{activeSeats} Seats : {activeSeats * admissionFee}</div>
       </div>
-    </>
+    </div>
   )
 };
 
-export { Seats as default };
+const mapStateToProps = (state, props) => ({
+  movie: state.movies.filter((movie) => movie.title === decodeURI(props.match.params.movieName))[0]
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  // startSetReservation: () => dispatch(startSetReservation())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Seats);

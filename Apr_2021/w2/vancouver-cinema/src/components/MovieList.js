@@ -1,19 +1,19 @@
-import React, { useContext } from 'react';
-import APIContext from '../context/API-context';
+import React from 'react';
+import { connect } from 'react-redux';
 import Movie from "./Movie";
 
-const MovieList = () => {
-  const { movies } = useContext(APIContext);
+export const MovieList = ({ movies }) => (
+  <div className="movielist-wrapper">
+    {
+      movies.map((movie) => (
+        <Movie key={movie.original_title} movie={movie} />
+      ))
+    }
+  </div>
+);
 
-  return (
-    <div className="movielist-wrapper">
-      {
-        Array.isArray(movies) && movies.map((movie) => (
-          <Movie key={movie.original_title} movie={movie} movies={movies}/>
-        ))
-      }
-    </div>
-  )
-};
+const mapStateToProps = (state) => ({
+  movies: state.movies
+})
 
-export { MovieList as default };
+export default connect(mapStateToProps)(MovieList);

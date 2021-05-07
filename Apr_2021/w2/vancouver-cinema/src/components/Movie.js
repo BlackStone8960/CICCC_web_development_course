@@ -2,13 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Genre from './Genre';
 
-const Movie = ({ movie, movies }) => {
+const Movie = ({ movie }) => {
   return (
     <div className="movie-box">
-      <Link to={{
-        pathname: `/item/${movie.id}`,
-        state: movies 
-      }}>
+      <Link to={`/item/${movie.id}`}>
         <div>
           <img
             src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}`}
