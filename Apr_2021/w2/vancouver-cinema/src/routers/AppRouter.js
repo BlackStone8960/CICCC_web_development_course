@@ -15,7 +15,7 @@ const AppRouter = () => (
         <Route path='/' component={HomePage} exact={true} />
         <Route path='/booking' component={BookingSeat} />
         <Route path='/item/:id' component={MovieDetail} />
-        <Route path='/reservation/:movieName' component={Seats} />
+        <Route path='/reservation/:id' component={Seats} />
       </Switch>
     </div>
   </Router>

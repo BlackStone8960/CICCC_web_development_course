@@ -3,10 +3,7 @@ const reservationsReducer = (state = {}, action) => {
     case 'SET_RESERVATION':
       return action.reservations;
     case 'UPDATE_RESERVATION':
-      return {
-        ...state,
-        [action.name]: action.reservation
-      }
+      return action.reservation;
     default :
       return state;
   }

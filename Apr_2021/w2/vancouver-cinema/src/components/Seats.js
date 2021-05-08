@@ -1,12 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { connect } from 'react-redux';
-// import { startSetReservation } from '../actions/'
-
-// first, set every movies reservation data -> done
-// second, find movie data from redux by movieName (if couldn't find it, use initial value in useState().)
-// render it
-// Make CONFIRM button to send reservation information to localstorage and redux
-// onSubmit CONFIRM button, dispatch updateReservation() and update information inside redux and localStorage.
+import { startUpdateReservation } from '../actions/reservations';
 
 export const Seats = (props) => {
   const [seats, setSeats] = useState([
@@ -14,14 +8,13 @@ export const Seats = (props) => {
     -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, 0, -1, -1,
     -1, 0, -1, -1, -1, -1, -1, 0, -1, -1, 0, -1, -1, -1, 0, -1, -1, -1,
     -1, 0, 0, -1, 0, -1, -1, -1, -1, -1
-  ]); // Reducerをつかったほうがいい？いいかもしれないが、SQLを使ってサーバに情報を保存したりする可能性があるのでいったん後回しでホームページなどのUIを作っていく
+  ]);
   const [activeSeats, setActiveSeats] = useState(0);
   const [admissionFee, setAdmissionFee] = useState(15);
 
   useEffect(() => {
-    
-    const seatsObj = JSON.parse(localStorage.getItem('seats'));
-    if (seatsObj) {
+    if (props.reservations && Object.keys(props.reservations).includes(props.match.params.id)) {
+      const seatsObj = props.reservations[`${props.match.params.id}`];
       setSeats(seatsObj.seats);
       setActiveSeats(seatsObj.activeSeats);
       setAdmissionFee(seatsObj.admissionFee);
@@ -30,8 +23,7 @@ export const Seats = (props) => {
 
   useEffect(() => {
     setActiveSeats(seats.filter((seat) => seat === 1).length);
-    localStorage.setItem('seats', JSON.stringify({ seats, activeSeats, admissionFee }))
-  }, [seats, activeSeats, admissionFee])
+  }, [seats])
 
   const seatActive = (seat, index) => {
     if (seat === 0) return;
@@ -53,6 +45,18 @@ export const Seats = (props) => {
     }
   }
 
+  const onClick = () => {
+    props.startUpdateReservation(
+      props.match.params.id,
+      { 
+        seats,
+        activeSeats,
+        admissionFee 
+      }
+    );
+
+  }
+
   return (
     <div className="seat-container">
       <div className="seat-wrapper">
@@ -67,16 +71,18 @@ export const Seats = (props) => {
       <div className="sum-text">
         <div>{activeSeats} Seats : {activeSeats * admissionFee}</div>
       </div>
+      <div onClick={onClick}>Confirm</div>
     </div>
   )
 };
 
 const mapStateToProps = (state, props) => ({
-  movie: state.movies.filter((movie) => movie.title === decodeURI(props.match.params.movieName))[0]
+  movie: state.movies.filter((movie) => movie.id === props.match.params.id)[0],
+  reservations: state.reservations
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  // startSetReservation: () => dispatch(startSetReservation())
+  startUpdateReservation: (id, reservation) => dispatch(startUpdateReservation(id, reservation))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Seats);

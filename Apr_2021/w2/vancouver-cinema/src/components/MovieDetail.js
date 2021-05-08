@@ -28,7 +28,7 @@ export const MovieDetail = ({ movie }) => (
             ))
           }
         </div>
-        <Link to={`/reservation/${encodeURI(movie.title)}`}>
+        <Link to={`/reservation/${movie.id}`}>
           <div className="reservation-btn">Make a reservation</div>
         </Link>
       </div>
