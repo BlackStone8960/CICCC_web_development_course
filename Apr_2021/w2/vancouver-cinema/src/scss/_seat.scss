@@ -1,9 +1,11 @@
 .seat-container {
   width: 600px;
-  margin: 300px auto;
-  background: rgb(170, 133, 204);
+  margin: 50px auto;
+  background-color: lighten(grey, 20%);
   padding: 50px;
   box-sizing: border-box;
+  border-radius: 16px;
+  color: black;
 
   .seat-description {
     display: flex;
@@ -65,6 +67,21 @@
     #total {
       color: brown;
       font-weight: bold;
+    }
+  }
+  .button-flex { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin: 40px auto 0;
+
+    .cancel { 
+      background: white;
+    }
+    .confirm {
+      background: $darkblue;
+      color: white;
     }
   }
 }

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { connect } from 'react-redux';
+import Header from './Header';
 import { startUpdateReservation } from '../actions/reservations';
 
 export const Seats = (props) => {
@@ -8,7 +9,7 @@ export const Seats = (props) => {
     -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, 0, -1, -1,
     -1, 0, -1, -1, -1, -1, -1, 0, -1, -1, 0, -1, -1, -1, 0, -1, -1, -1,
     -1, 0, 0, -1, 0, -1, -1, -1, -1, -1
-  ]);
+  ]); 
   const [activeSeats, setActiveSeats] = useState(0);
   const [admissionFee, setAdmissionFee] = useState(15);
 
@@ -45,7 +46,7 @@ export const Seats = (props) => {
     }
   }
 
-  const onClick = () => {
+  const onConfirm = () => {
     props.startUpdateReservation(
       props.match.params.id,
       { 
@@ -54,25 +55,37 @@ export const Seats = (props) => {
         admissionFee 
       }
     );
-
+    props.history.push('/');
   }
 
+  const onCancel = () => {
+    props.history.push(`/item/${props.match.params.id}`);
+  }
+
+  const seatWord = activeSeats === 1 ? 'Seat' : 'Seats';
+
   return (
-    <div className="seat-container">
-      <div className="seat-wrapper">
-        {seats.map((seat, index) => (
-          <div
-            className={switchSeat(seat)}
-            onClick={() => seatActive(seat, index)}
-            key={index}
-          ></div>
-        ))}
+    <section className="main-container">
+      <Header />
+      <div className="seat-container">
+        <div className="seat-wrapper">
+          {seats.map((seat, index) => (
+            <div
+              className={switchSeat(seat)}
+              onClick={() => seatActive(seat, index)}
+              key={index}
+            ></div>
+          ))}
+        </div>
+        <div className="sum-text">
+          <div>{activeSeats} {seatWord} : ${activeSeats * admissionFee}</div>
+        </div>
+        <div className="button-flex">
+          <div className="button cancel" onClick={onCancel}>CANCEL</div>
+          <div className="button confirm" onClick={onConfirm}>CONFIRM</div>
+        </div>
       </div>
-      <div className="sum-text">
-        <div>{activeSeats} Seats : {activeSeats * admissionFee}</div>
-      </div>
-      <div onClick={onClick}>Confirm</div>
-    </div>
+    </section>
   )
 };
 

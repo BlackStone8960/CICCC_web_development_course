@@ -28,8 +28,8 @@ export const MovieDetail = ({ movie }) => (
             ))
           }
         </div>
-        <Link to={`/reservation/${movie.id}`}>
-          <div className="reservation-btn">Make a reservation</div>
+        <Link to={`/reservation/${movie.id}`} className="reservation-link">
+          <div className="button reservation">MAKE A RESERVATION</div>
         </Link>
       </div>
     </div>

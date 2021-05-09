@@ -31,5 +31,15 @@
       margin: 30px 0;
       font-size: 18px;
     }
+    .reservation-link {
+      display: block;
+      margin: 30px auto;
+      width: 200px;
+      .reservation {
+        width: 100% !important;
+        background: complement($darkblue);
+        color: white;
+      }
+    }
   }
 }
