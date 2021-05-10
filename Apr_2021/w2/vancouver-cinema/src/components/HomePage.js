@@ -1,11 +1,13 @@
 import React from 'react';
 import MovieList from './MovieList';
 import Header from './Header';
+import { connect } from 'react-redux';
+import { resetFilters } from '../actions/filters';
 
-const Homepage = () => {  
+export const Homepage = (props) => {  
   return (
     <section className="main-container">
-      <Header />
+      <Header history={props.history}/>
       <div className="main-wrapper">
         <MovieList />
       </div>
@@ -13,4 +15,8 @@ const Homepage = () => {
   );
 };
 
-export { Homepage as default };
+const mapDispatchToProps = (dispatch) => ({
+  resetFilters: () => dispatch(resetFilters())
+});
+
+export default connect(undefined, mapDispatchToProps)(Homepage);

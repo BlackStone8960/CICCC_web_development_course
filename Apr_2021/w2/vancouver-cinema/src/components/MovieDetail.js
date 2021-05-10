@@ -4,9 +4,9 @@ import Genre from './Genre';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-export const MovieDetail = ({ movie }) => (
+export const MovieDetail = ({ movie, history }) => (
   <section className="main-container">
-    <Header />
+    <Header history={history}/>
     <div className="detail-wrapper">
       <img
         src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}`}

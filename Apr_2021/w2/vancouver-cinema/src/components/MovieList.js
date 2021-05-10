@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Movie from "./Movie";
+import selectMovies from '../selectors/movies';
 
 export const MovieList = ({ movies }) => (
   <div className="movielist-wrapper">
@@ -13,7 +14,7 @@ export const MovieList = ({ movies }) => (
 );
 
 const mapStateToProps = (state) => ({
-  movies: state.movies
+  movies: selectMovies(state.movies, state.filters)
 })
 
 export default connect(mapStateToProps)(MovieList);

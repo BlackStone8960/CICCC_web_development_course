@@ -4,12 +4,7 @@ import Header from './Header';
 import { startUpdateReservation } from '../actions/reservations';
 
 export const Seats = (props) => {
-  const [seats, setSeats] = useState([
-    -1, 0, 0, -1, 0, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1,
-    -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, 0, -1, -1,
-    -1, 0, -1, -1, -1, -1, -1, 0, -1, -1, 0, -1, -1, -1, 0, -1, -1, -1,
-    -1, 0, 0, -1, 0, -1, -1, -1, -1, -1
-  ]); 
+  const [seats, setSeats] = useState([...Array(64)].fill(-1)); 
   const [activeSeats, setActiveSeats] = useState(0);
   const [admissionFee, setAdmissionFee] = useState(15);
 
@@ -17,8 +12,6 @@ export const Seats = (props) => {
     if (props.reservations && Object.keys(props.reservations).includes(props.match.params.id)) {
       const seatsObj = props.reservations[`${props.match.params.id}`];
       setSeats(seatsObj.seats);
-      setActiveSeats(seatsObj.activeSeats);
-      setAdmissionFee(seatsObj.admissionFee);
     }
   }, [])
 
@@ -47,10 +40,14 @@ export const Seats = (props) => {
   }
 
   const onConfirm = () => {
+    const reservedSeats = seats.map((seat) => {
+      if (seat === 1) seat = 0;
+      return seat;
+    })
     props.startUpdateReservation(
       props.match.params.id,
       { 
-        seats,
+        seats: reservedSeats,
         activeSeats,
         admissionFee 
       }
@@ -66,7 +63,7 @@ export const Seats = (props) => {
 
   return (
     <section className="main-container">
-      <Header />
+      <Header history={props.history}/>
       <div className="seat-container">
         <div className="seat-wrapper">
           {seats.map((seat, index) => (
