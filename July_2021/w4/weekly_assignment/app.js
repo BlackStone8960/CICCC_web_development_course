@@ -63,9 +63,14 @@ const server = http.createServer((req, res) => {
               <textarea rows="4" cols="50" placeholder="Input your message"></textarea>
             </label>
           </div>
+          <input type="submit" />
         </form>
       `
+      break;
     default:
+      content = `
+        <div>404 Page not found. </div>
+      `;
       break;
   }
   res.writeHead(200, {'Content-Type': 'text/html'});
