@@ -1,0 +1,14 @@
+.table1 {
+  border-collapse: collapse;
+}
+
+tr, th, td {
+  border: 1px solid #000;
+} 
+th, td {
+  padding: 4px 8px;
+}
+
+.wrapper {
+  margin: 40px 0;
+}
